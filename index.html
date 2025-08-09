@@ -161,24 +161,14 @@
                 <div class="category-count">18</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
-                <div class="category-count">9</div>
-            </a>
-        
             <a class="category-link" href="/categories/Overthewire/Bandit/">
                 Bandit
                 <div class="category-count">9</div>
             </a>
-        </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
+        
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
+                <div class="category-count">9</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
@@ -189,6 +179,16 @@
             <a class="category-link" href="/categories/Dreamhack/Wargame/">
                 Wargame
                 <div class="category-count">3</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
@@ -368,6 +368,100 @@
    
 
 
+<article id="post-2025-08-06-Natas-8" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/06/2025-08-06-Natas-8/">Natas 8</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-05T15:00:00.000Z" itemprop="datePublished">2025-08-06</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.9k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic-php/" rel="tag">basic php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/decoding/" rel="tag">decoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding/" rel="tag">encoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Natas 8 / write-up
+
+접속 정보
+
+URL : http://natas8.natas.labs.overthewire.org
+사용자 이름 : natas8
+비밀번호 : xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+
+
+접속하면,
+
+사용자의 입력을 받을 수 있는 입력 폼과, 제출 버튼, View sourcecode 링크도 볼 수 있다.
+
+우선 아무거나 입력해서 제출해보고 어떤 일이 일어나는지 확인해보자.
+(1234 입력해봤다)
+
+“Wrong secret” 이라는 문구가 출력된 것을 보면, 알맞은 입력 값을 입력해줘야하나 보다.
+
+View sourececode 를 클릭해 소스코드가 어떻게 되어있는지 확인해보자.
+
+소스 코드를 확인해보았을 때, 해당 페이지는 다음과 같은 php 코드로 동작하고 있었다.
+12345678910111213141516&lt;?$encodedSecret = &quot;3d3d516343746d4d6d6c315669563362&quot;;fu...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/06/2025-08-06-Natas-8/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-08-06-Bandit-8" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -474,7 +568,7 @@ echo &quot;h...
    
 
 
-<article id="post-2025-08-06-Natas-8" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-08-05-Bandit-7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -485,7 +579,7 @@ echo &quot;h...
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/06/2025-08-06-Natas-8/">Natas 8</a>
+        <a class="p-name article-title" href="/2025/08/05/2025-08-05-Bandit-7/">Bandit 7</a>
       </h1>
     
   
@@ -493,50 +587,55 @@ echo &quot;h...
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-05T15:00:00.000Z" itemprop="datePublished">2025-08-06</time>
+  <time class="dt-published" datetime="2025-08-04T15:00:00.000Z" itemprop="datePublished">2025-08-05</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2.9k words 
+            1.2k words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic-php/" rel="tag">basic php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/decoding/" rel="tag">decoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding/" rel="tag">encoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep-command/" rel="tag">grep command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/man-command/" rel="tag">man command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Natas 8 / write-up
+              Bandit 7 / write-up
 
-접속 정보
+bandit 7 레벨 접속 패스워드 : morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
-URL : http://natas8.natas.labs.overthewire.org
-사용자 이름 : natas8
-비밀번호 : xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q
+이번 문제도 접속해서 플래그를 찾아보자.
+접속해서 뭐가 있나 확인해보니…
 
+?? 꽁짜 문제인가 ??
+한번 읽어봤는데
 
-접속하면,
+어… 뭔가 엄청 많이 들어있다…(사진에서는 짤린거임.)
+이것들 중에 플래그가 있다는 말인 것 같다…
+문제를 한번 읽어 보자.
 
-사용자의 입력을 받을 수 있는 입력 폼과, 제출 버튼, View sourcecode 링크도 볼 수 있다.
+문제를 보면 data.txt 안에 다음 레벨로 가는 패스워드가 들어있고, millionth 라는 단어 바로 옆에 있다고 한다.
 
-우선 아무거나 입력해서 제출해보고 어떤 일이 일어나는지 확인해보자.
-(1234 입력해봤다)
+이번에는 정석적으로(?) 풀어보겠다.
 
-“Wrong secret” 이라는 문구가 출력된 것을 보면, 알맞은 입력 값을 입력해줘야하나 보다.
+내가 써본(지금까지 알게된) 명령어
 
-View sourececode 를 클릭해 소스코드가 어떻게 되어있는지 확인해보자.
+ls, cd, cat, pwd, find, file
 
-소스 코드를 확인해보았을 때, 해당 페이지는 다음과 같은 php 코드로 동작하고 있었다.
-12345678910111213141516&lt;?$encodedSecret = &quot;3d3d516343746d4d6d6c315669563362&quot;;fu...
+일단 이 중에서 파일 내에 특정 단어 옆에 있는 텍스트를 추출할 수 있을만한 명령어는 보이지 않는다…
+
+man(manual) 명령을 사용해서 쓸만한 명령이 있나 찾아보자.
+(man은 리눅스 명령어 도움말을 볼 수 있는 명령이다)
+다음과 같이 명령을...
             
           </div>
         
@@ -548,7 +647,7 @@ View sourececode 를 클릭해 소스코드가 어떻게 되어있는지 확인�
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/08/06/2025-08-06-Natas-8/" 
+      href="/2025/08/05/2025-08-05-Bandit-7/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -644,105 +743,6 @@ Home 부터 접속해보자.
     <a class="right-panel  non-pic  "
       
       href="/2025/08/05/2025-08-05-Natas-7/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-05-Bandit-7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/05/2025-08-05-Bandit-7/">Bandit 7</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-04T15:00:00.000Z" itemprop="datePublished">2025-08-05</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.2k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep-command/" rel="tag">grep command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/man-command/" rel="tag">man command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Bandit 7 / write-up
-
-bandit 7 레벨 접속 패스워드 : morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
-
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
-
-?? 꽁짜 문제인가 ??
-한번 읽어봤는데
-
-어… 뭔가 엄청 많이 들어있다…(사진에서는 짤린거임.)
-이것들 중에 플래그가 있다는 말인 것 같다…
-문제를 한번 읽어 보자.
-
-문제를 보면 data.txt 안에 다음 레벨로 가는 패스워드가 들어있고, millionth 라는 단어 바로 옆에 있다고 한다.
-
-이번에는 정석적으로(?) 풀어보겠다.
-
-내가 써본(지금까지 알게된) 명령어
-
-ls, cd, cat, pwd, find, file
-
-일단 이 중에서 파일 내에 특정 단어 옆에 있는 텍스트를 추출할 수 있을만한 명령어는 보이지 않는다…
-
-man(manual) 명령을 사용해서 쓸만한 명령이 있나 찾아보자.
-(man은 리눅스 명령어 도움말을 볼 수 있는 명령이다)
-다음과 같이 명령을...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/05/2025-08-05-Bandit-7/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
