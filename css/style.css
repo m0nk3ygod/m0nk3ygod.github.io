@@ -5,7 +5,7 @@
   --neut-L30: rgba(255,255,255,0.3);
   --neut-L10: rgba(255,255,255,0.1);
   --banner-dim: rgba(0,0,0,0.2);
-  --primary-hue: 0;
+  --primary-hue: 170;
   --main-title: rgba(255,255,255,0.9);
   --btn-content: var(--neut-L75);
   --btn-content-hover: var(--btn-content);
@@ -73,37 +73,37 @@
 }
 @supports not (color: oklch(0 0 0)) {
   :root {
-    --primary: #f486aa;
-    --nav-dropdown-bg: #1e1216;
-    --page-background: #120b0d;
-    --card-background: #2a1e21;
-    --btn-bg: #543941;
-    --btn-hover: #6b4b54;
-    --btn-active: #7c5762;
-    --card-btn-hover: #3b282d;
-    --card-btn-active: #4a333a;
-    --btn-text-hover: #1e1216;
-    --btn-text-active: #160c0f;
-    --timeline-dim-dot: #7c5762;
-    --title-active: #ca6e8c;
-    --tag-dot: #2a1e21;
-    --highlight-selection: #4a333a;
-    --article-code-bg: #5a3f47;
-    --article-block: #1e1216;
-    --link-hover-bg: #6a3446;
-    --link-active-bg: #572a39;
-    --blockquote-bg: #1e1216;
-    --color-picker-range: #5a3f47;
-    --badge-bg: #ec8dab;
-    --text-on-light: #2a1e21;
-    --pagenav-curr-text: #2a1e21;
-    --input-field: #1e1216;
-    --primary-btn-text: #2a1e21;
-    --enter-btn-bg: #1e1216;
-    --enter-btn-hover: #3b282d;
-    --enter-btn-active: #4a333a;
-    --selection-bg: #6a3446;
-    --code-block-selection-bg: #6a3446;
+    --primary: #2acaa0;
+    --nav-dropdown-bg: #0d1915;
+    --page-background: #070f0c;
+    --card-background: #182520;
+    --btn-bg: #2c493f;
+    --btn-hover: #3b5e51;
+    --btn-active: #456d5f;
+    --card-btn-hover: #1e332b;
+    --card-btn-active: #274138;
+    --btn-text-hover: #0d1915;
+    --btn-text-active: #08120e;
+    --timeline-dim-dot: #456d5f;
+    --title-active: #24a684;
+    --tag-dot: #182520;
+    --highlight-selection: #274138;
+    --article-code-bg: #314f44;
+    --article-block: #0d1915;
+    --link-hover-bg: #005541;
+    --link-active-bg: #004635;
+    --blockquote-bg: #0d1915;
+    --color-picker-range: #314f44;
+    --badge-bg: #4fc6a2;
+    --text-on-light: #182520;
+    --pagenav-curr-text: #182520;
+    --input-field: #0d1915;
+    --primary-btn-text: #182520;
+    --enter-btn-bg: #0d1915;
+    --enter-btn-hover: #1e332b;
+    --enter-btn-active: #274138;
+    --selection-bg: #005541;
+    --code-block-selection-bg: #005541;
   }
 }
 :root[theme='light'] {
@@ -158,31 +158,31 @@
 }
 @supports not (color: oklch(0 0 0)) {
   :root[theme='light'] {
-    --primary: #e3769b;
-    --page-background: #f5ecee;
-    --nav-dropdown-bg: #fcf7f8;
-    --btn-bg: #fee8ee;
-    --btn-content: #a8506f;
-    --btn-hover: #fcd1dc;
-    --btn-active: #fbb8cb;
-    --btn-text-hover: #fee8ee;
-    --btn-text-active: #fff6f8;
-    --btn-text-content: #e3769b;
-    --card-btn-hover: #fcf7f8;
-    --card-btn-active: #f0d6dd;
-    --title-active: #b95f7d;
-    --link-hover-bg: #fee8ee;
-    --link-active-bg: #fcd1dc;
-    --article-code-bg: #fbe9ee;
-    --blockquote-bg: #fcf7f8;
-    --badge-bg: #fbe9ee;
-    --text-on-light: #a8506f;
-    --color-picker-range: #fbe9ee;
-    --input-field: #fcf7f8;
-    --enter-btn-bg: #fcf7f8;
-    --enter-btn-hover: #fbeef1;
-    --enter-btn-active: #f0d6dd;
-    --selection-bg: #fcd1dc;
+    --primary: #00ba91;
+    --page-background: #e8f1ed;
+    --nav-dropdown-bg: #f5faf8;
+    --btn-bg: #dff4ec;
+    --btn-content: #008767;
+    --btn-hover: #bee9d9;
+    --btn-active: #98dfc6;
+    --btn-text-hover: #dff4ec;
+    --btn-text-active: #f2fbf7;
+    --btn-text-content: #00ba91;
+    --card-btn-hover: #f5faf8;
+    --card-btn-active: #cce5db;
+    --title-active: #009775;
+    --link-hover-bg: #dff4ec;
+    --link-active-bg: #bee9d9;
+    --article-code-bg: #e2f3ec;
+    --blockquote-bg: #f5faf8;
+    --badge-bg: #e2f3ec;
+    --text-on-light: #008767;
+    --color-picker-range: #e2f3ec;
+    --input-field: #f5faf8;
+    --enter-btn-bg: #f5faf8;
+    --enter-btn-hover: #e9f5f0;
+    --enter-btn-active: #cce5db;
+    --selection-bg: #bee9d9;
   }
 }
 body {
