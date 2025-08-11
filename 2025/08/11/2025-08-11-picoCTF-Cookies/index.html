@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>(Easy) Cookies | m0nk3ygod&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="picoCTF &#x2F; Web Exploitation  Difficulty Level : Easy Title : Cookies    [Description] 누가 쿠키를 안 좋아하겠어요? 가장 맛있는(?) 쿠키를 찾아보세요  보아하니 먹는 쿠키는 아닌거 같고, 웹 브라우저의 HTTP 쿠키를 의미하는 것 같다. 우선 문제에 접속해봤다.  뭔가 입력 받을 수 있는">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(Easy) Cookies">
+<meta property="og:url" content="https://m0nk3ygod.github.io/2025/08/11/2025-08-11-picoCTF-Cookies/index.html">
+<meta property="og:site_name" content="m0nk3ygod&#39;s Blog">
+<meta property="og:description" content="picoCTF &#x2F; Web Exploitation  Difficulty Level : Easy Title : Cookies    [Description] 누가 쿠키를 안 좋아하겠어요? 가장 맛있는(?) 쿠키를 찾아보세요  보아하니 먹는 쿠키는 아닌거 같고, 웹 브라우저의 HTTP 쿠키를 의미하는 것 같다. 우선 문제에 접속해봤다.  뭔가 입력 받을 수 있는">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-11-27-59.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-11-36-36.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-11-39-25.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-11-43-45.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-11-46-36.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-11-51-20.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-12-19-42.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-12-59-26.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-01-29.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-02-41.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-05-46.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-38-05.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-40-53.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-41-53.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-45-01.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-51-29.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-13-53-01.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-14-00-29.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-14-02-08.png">
+<meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-14-02-32.png">
+<meta property="article:published_time" content="2025-08-10T15:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-11T06:01:57.705Z">
+<meta property="article:author" content="Seungwon Lee">
+<meta property="article:tag" content="cookies">
+<meta property="article:tag" content="picoctf">
+<meta property="article:tag" content="web hacking">
+<meta property="article:tag" content="write-up">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-11-27-59.png">
+  
+    <link rel="alternate" href="/atom.xml" title="m0nk3ygod's Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+  
+    
+<div id="banner" class="">
+  <img src="/images/banner.png" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>m0nk3ygod's Blog </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/images/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">m0nk3ygod </div>
+      <div class="dot"></div>
+      <div class="subtitle">My Security Blog </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://linkedin.com/in/monkeysecurity806" title="Linkedin"><i class="fa-brands fa-linkedin"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://instagram.com/monkey_security" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/m0nk3ygod" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/Overthewire/">
+                Overthewire
+                <div class="category-count">18</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Overthewire/Bandit/">
+                Bandit
+                <div class="category-count">9</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
+                <div class="category-count">9</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Dreamhack/">
+                Dreamhack
+                <div class="category-count">3</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Dreamhack/Wargame/">
+                Wargame
+                <div class="category-count">3</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/picoCTF/">
+                picoCTF
+                <div class="category-count">8</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/picoCTF/Web-Exploitation/">
+                Web Exploitation
+                <div class="category-count">8</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/settings/">
+                settings
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Archives</h3>
+      
+      
+        <a class="archive-link" href="/archives/2025/08 ">
+          August 2025 
+          <div class="archive-count">16 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/07 ">
+          July 2025 
+          <div class="archive-count">15 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
+            <div class="recent-link-text">
+              (Easy) Cookies
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
+            <div class="recent-link-text">
+              (Easy) Cookie Monster Secret Recipe
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
+            <div class="recent-link-text">
+              (Easy) Includes
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-logon/" title="(Easy) logon" >
+            <div class="recent-link-text">
+              (Easy) logon
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
+            <div class="recent-link-text">
+              (Easy) Scavenger Hunt
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-2025-08-11-picoCTF-Cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        (Easy) Cookies
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.9k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h1 id="picoctf-%2F-web-exploitation" tabindex="-1">picoCTF / Web Exploitation</h1>
+<hr>
+<h4 id="difficulty-level-%3A-easy" tabindex="-1" id="Difficulty-Level-Easy">Difficulty Level : Easy</h4>
+<h4 id="title-%3A-cookies" tabindex="-1" id="Title-Cookies">Title : Cookies</h4>
+<hr>
+<p><img src="/assets/img/picoCTF/2025-08-06-11-27-59.png" alt="cookies figure1"></p>
+<blockquote>
+<p>[Description]<br>
+누가 쿠키를 안 좋아하겠어요?
+가장 맛있는(?) 쿠키를 찾아보세요</p>
+</blockquote>
+<p>보아하니 먹는 쿠키는 아닌거 같고,<br>
+웹 브라우저의 HTTP 쿠키를 의미하는 것 같다.</p>
+<p>우선 문제에 접속해봤다.</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-11-36-36.png" alt="cookies figure2"></p>
+<p>뭔가 입력 받을 수 있는 입력폼과,<br>
+폼 전송 역할을 할 것 같은 <code>Search</code> 버튼도 보인다.</p>
+<p>입력폼에 “snickerdoodle” 이라는 단어가 보여서</p>
+<p>똑같이 입력해봤더니</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-11-39-25.png" alt="cookies figure3"></p>
+<blockquote>
+<p>그건 쿠키에요! 하지만 별로 특별하진 않네요…</p>
+</blockquote>
+<p>해당 문구와 함께 “I love snickerdoodle cookies!” 라는 문장을 보여준다.</p>
+<p>아무래도 특별한 쿠키를 찾으면 되는 것 같다.</p>
+<br>
+쿠키 문제인 것 같으니 개발자 도구를 열어 쿠키가 설정되어있는지, 어떻게 설정되어 있는지 확인해 봤다.  
+(개발자 도구 단축키는 F12 or 페이지 빈 곳 우클릭 - 검사)
+<p>개발자 도구를 열고 <code>Application</code> 탭으로 이동하면 쿠키를 확인할 수 있다.</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-11-43-45.png" alt="cookies figure4"></p>
+<p><code>name</code> 이라는 쿠키가 있었고,<br>
+값은 <code>0</code> 으로 되어있었다.</p>
+<p>요 값을 1로 바꾸고 새로고침해서 결과를 봤는데,</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-11-46-36.png" alt="cookies figure5"></p>
+<blockquote>
+<p>그건 쿠키에요! 하지만 별로 특별하진 않네요…</p>
+</blockquote>
+<p>해당 문구와 함께 “snickerdoodle” 이었던게 “chocolate chip” 으로 바뀌었다.</p>
+<br>
+2도 넣어봤다.
+<p><img src="/assets/img/picoCTF/2025-08-06-11-51-20.png" alt="cookies figure6"></p>
+<br>
+이것을 통해 알 수 있는 점은,
+<ul>
+<li>쿠키 이름을 적으면 “I love [cookie name] cookies!” 가 출력된다.</li>
+<li>쿠키 별로 값이 다르다. (고유 쿠키값을 가진다)</li>
+</ul>
+<br>
+지금까지 확인된 쿠키  
+<p>snickerdoodle - 0<br>
+chocolate chip - 1<br>
+oatmeal raisin - 2</p>
+<br>
+이제 숫자를 1씩 증가시켜보며 특별한 쿠키를 찾으면 된다!!!
+<p>…</p>
+<p>근데 노가다 하기는 싫다…</p>
+<p>그래서 <code>Burp Suite</code> 의 <code>Intruder</code> 기능을 이용해서 <code>Sniper Attack</code>, 자동화 공격을 진행해볼 수 있다.</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-12-19-42.png" alt="cookies figure7"></p>
+<p>우선 사진과 같이 Burp Suite 의 Proxy 서버 브라우저를 열어 다시 문제에 접속해줬다.</p>
+<p>그리고 쿠키 생성을 위해 “snickerdoodle” 을 입력했다.</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-12-59-26.png" alt="cookies figure8"></p>
+<p><code>Proxy - HTTP history</code> 탭에서 통신한 내용을 확인해보니</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-01-29.png" alt="cookies figure9"></p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-02-41.png" alt="cookies figure10"></p>
+<p>서버에 요청할 때 <code>Cookie: name=0</code> 형태로 쿠키를 설정해 요청을 보내고 있음을 확인할 수 있었다.</p>
+<br>
+이제 `0`을 1씩 증가시켜보면서 특별한 쿠키를 찾아보자.
+<p><code>BurpSuite - Proxy - HTTP history</code> 탭에서 <code>Request</code> 영역을 우클릭하고,<br>
+<code>Send to Intruder</code> 를 선택한다.</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-05-46.png" alt="cookies figure11"></p>
+<p>그리고 <code>BurpSuite - Intruder</code> 탭에 들어가보면</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-38-05.png" alt="cookies figure12"></p>
+<p>Target과 요청 양식이 그대로 받아져온 것을 확인할 수 있다.</p>
+<br>
+### 사용법
+<p>우선 바꿀 바라미터 값을 드래그해서 <strong>블록</strong> 처리 해준다.</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-40-53.png" alt="cookies figure13"></p>
+<p>이후 <code>Add§</code> 버튼을 누르게 되면,</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-41-53.png" alt="cookies figure14"></p>
+<p>이렇게 바뀐다.</p>
+<p>이것은 자동화 대상의 파라미터로 지정했음을 의미한다.</p>
+<br>
+이제 우측 `Payloads` 탭을 보자.
+<p>Payload type을 보면 <code>Simple list</code> 로 설정되어 있을텐데,<br>
+이걸 <code>Numbers</code> 로 바꿔주자.</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-45-01.png" alt="cookies figure15"></p>
+<p>그러면 사진과 같이 바뀌게 되는데,<br>
+<code>Payload configuration</code> 의 <code>Number range</code> 부분을 수정해줄 것이다.</p>
+<ul>
+<li>Type : 순차적 또는 무작위 (Sequential 선택)</li>
+<li>From : 시작할 숫자 (0)</li>
+<li>To : 종료할 숫자 (ex. 30)</li>
+<li>Step : 증가할 숫자 단위 (1)</li>
+</ul>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-51-29.png" alt="cookies figure16"></p>
+<p>이렇게 설정하고, 주황색 버튼 (Start Attack) 을 누르면?</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-13-53-01.png" alt="cookies figure17"></p>
+<p>사진과 같이 설정한 Payload 대로 파라미터를 수정하며 요청을 보내기 시작한다.</p>
+<br>
+공격 결과들을 쭉 보고 있는데
+<p><img src="/assets/img/picoCTF/2025-08-06-14-00-29.png" alt="cookies figure18"></p>
+<p>이상하게 쿠기 값을 <code>18</code> 로 주었을 때 응답 길이가 짧은 것을 볼 수 있었다.<br>
+(Length를 보면 다 1900대 인데 혼자 1200대임…)</p>
+<p>해당 요청에 대한 응답 결과를 쭉 확인해보니…</p>
+<p><img src="/assets/img/picoCTF/2025-08-06-14-02-08.png" alt="cookies figure19"></p>
+<p><img src="/assets/img/picoCTF/2025-08-06-14-02-32.png" alt="cookies figure20">
+(쿠키 값 변경 후 새로고침도 해본 모습)</p>
+<p>플래그를 찾을 수 있었다.</p>
+<br>
+flag : ~~picoCTF{3v3ry1_l0v3s_c00k135_bb3b3535}~~
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/"
+      title="(Easy) Cookie Monster Secret Recipe"
+     >
+
+    <p class="title-text">
+      
+        (Easy) Cookie Monster Secret Recipe
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 m0nk3ygod<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
+</html>
