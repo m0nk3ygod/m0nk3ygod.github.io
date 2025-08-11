@@ -47,6 +47,37 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  <script>
+(function () {
+  // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
+  window.__BUILD_ID__ = 1754905749151;
+  const KEY = 'last_build_id';
+  const last = Number(localStorage.getItem(KEY) || 0);
+  const now  = Number(window.__BUILD_ID__ || Date.now());
+  if (!last || last !== now) {
+    // 2) 서비스워커/Cache Storage 비우기 (원점의 캐시만)
+    Promise.resolve().then(async () => {
+      if ('serviceWorker' in navigator) {
+        const regs = await navigator.serviceWorker.getRegistrations();
+        for (const r of regs) await r.unregister();
+      }
+      if ('caches' in window) {
+        const keys = await caches.keys();
+        await Promise.all(keys.map(k => caches.delete(k)));
+      }
+    }).then(() => {
+      // 3) HTTP 캐시는 못 지우므로, 쿼리 파라미터로 강제 새 요청
+      const url = new URL(location.href);
+      url.searchParams.set('_r', String(now));
+      localStorage.setItem(KEY, String(now));
+      location.replace(url.toString()); // 1회만 새로고침
+    }).catch(() => {
+      localStorage.setItem(KEY, String(now));
+    });
+  }
+})();
+</script>
+
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body>
@@ -245,6 +276,12 @@
             </div>
           </a>
         
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
+            <div class="recent-link-text">
+              (Easy) Cookies
+            </div>
+          </a>
+        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
             <div class="recent-link-text">
               (Easy) Includes
@@ -254,12 +291,6 @@
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
             <div class="recent-link-text">
               (Easy) WebDecode
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
-            <div class="recent-link-text">
-              (Easy) Cookies
             </div>
           </a>
         
@@ -338,25 +369,6 @@
     
       
       
-      <a class="archive-article-link" href="/2025/08/05/2025-08-05-Natas-7/" title="Natas 7">
-        <div class="date">08-05</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    Natas 7
-                
-            </div>
-        </div>
-        <div class="tags">
-            #overthewire #study #natas #web basic #basic php #GET Method #LFI
-        </div>
-      </a>
-    
-      
-      
       <a class="archive-article-link" href="/2025/08/05/2025-08-05-Bandit-7/" title="Bandit 7">
         <div class="date">08-05</div>
         <div class="line">
@@ -376,20 +388,20 @@
     
       
       
-      <a class="archive-article-link" href="/2025/07/31/2025-07-31-Natas-6/" title="Natas 6">
-        <div class="date">07-31</div>
+      <a class="archive-article-link" href="/2025/08/05/2025-08-05-Natas-7/" title="Natas 7">
+        <div class="date">08-05</div>
         <div class="line">
             <div class="dot"></div>
         </div>
         <div class="title">
             <div class="title-inner">
                 
-                    Natas 6
+                    Natas 7
                 
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #natas #web basic #basic php
+            #overthewire #study #natas #web basic #basic php #GET Method #LFI
         </div>
       </a>
     
@@ -409,6 +421,25 @@
         </div>
         <div class="tags">
             #overthewire #bandit #linux #study #find command
+        </div>
+      </a>
+    
+      
+      
+      <a class="archive-article-link" href="/2025/07/31/2025-07-31-Natas-6/" title="Natas 6">
+        <div class="date">07-31</div>
+        <div class="line">
+            <div class="dot"></div>
+        </div>
+        <div class="title">
+            <div class="title-inner">
+                
+                    Natas 6
+                
+            </div>
+        </div>
+        <div class="tags">
+            #overthewire #study #natas #web basic #basic php
         </div>
       </a>
     
@@ -452,25 +483,6 @@
     
       
       
-      <a class="archive-article-link" href="/2025/07/29/2025-07-29-Bandit-4/" title="Bandit 4">
-        <div class="date">07-29</div>
-        <div class="line">
-            <div class="dot"></div>
-        </div>
-        <div class="title">
-            <div class="title-inner">
-                
-                    Bandit 4
-                
-            </div>
-        </div>
-        <div class="tags">
-            #overthewire #bandit #linux #study #file command
-        </div>
-      </a>
-    
-      
-      
       <a class="archive-article-link" href="/2025/07/29/2025-07-29-Natas-4/" title="Natas 4">
         <div class="date">07-29</div>
         <div class="line">
@@ -485,6 +497,25 @@
         </div>
         <div class="tags">
             #overthewire #study #natas #web basic #referer head
+        </div>
+      </a>
+    
+      
+      
+      <a class="archive-article-link" href="/2025/07/29/2025-07-29-Bandit-4/" title="Bandit 4">
+        <div class="date">07-29</div>
+        <div class="line">
+            <div class="dot"></div>
+        </div>
+        <div class="title">
+            <div class="title-inner">
+                
+                    Bandit 4
+                
+            </div>
+        </div>
+        <div class="tags">
+            #overthewire #bandit #linux #study #file command
         </div>
       </a>
     
