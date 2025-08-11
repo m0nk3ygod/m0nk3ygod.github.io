@@ -51,7 +51,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1754905945924;
+    window.__BUILD_ID__ = 1754906239440;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -194,24 +194,14 @@
                 <div class="category-count">18</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Bandit/">
-                Bandit
-                <div class="category-count">9</div>
-            </a>
-        
             <a class="category-link" href="/categories/Overthewire/Natas/">
                 Natas
                 <div class="category-count">9</div>
             </a>
-        </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
+        
+            <a class="category-link" href="/categories/Overthewire/Bandit/">
+                Bandit
+                <div class="category-count">9</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
@@ -222,6 +212,16 @@
             <a class="category-link" href="/categories/Dreamhack/Wargame/">
                 Wargame
                 <div class="category-count">3</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/picoCTF/">
@@ -271,21 +271,15 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
-            <div class="recent-link-text">
-              (Easy) Cookie Monster Secret Recipe
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
-            <div class="recent-link-text">
-              (Easy) Cookies
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
             <div class="recent-link-text">
               (Easy) Includes
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
+            <div class="recent-link-text">
+              (Easy) Cookie Monster Secret Recipe
             </div>
           </a>
         
@@ -298,6 +292,12 @@
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-logon/" title="(Easy) logon" >
             <div class="recent-link-text">
               (Easy) logon
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
+            <div class="recent-link-text">
+              (Easy) WebDecode
             </div>
           </a>
         
@@ -503,6 +503,105 @@ Access disallowed. You are visiting from “” while authorized users should co
    
 
 
+<article id="post-2025-07-28-Bandit-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/28/2025-07-28-Bandit-3/">Bandit 3</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-27T15:00:00.000Z" itemprop="datePublished">2025-07-28</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            643 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ls-options/" rel="tag">ls options</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Bandit 3 / write-up
+
+bandit 3 레벨 접속 패스워드 : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+이번 문제도 접속해서 플래그를 찾아보자.
+접속해서 뭐가 있나 확인해보니…
+
+이번에는 파란 글씨다?
+리스트의 -l 옵션을 사용해서 자세히 보자.
+
+drwxr-xr-x 라고 되어 있는데, d는 디렉토리의 약자다.
+현재 작업하고 있는 디렉토리는
+
+/home/bandit3 이다.
+inhere에 플래그가 있을 것 같으니 작업(명령어를 수행)할 디렉토리를 변경해주겠다.
+cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있는 inhere로 작업 디렉토리를 변경한다.
+
+(변경된 모습)
+이제 여기서 다시 ls를 입력해 뭐가 들어있나 보자.
+
+? 쉽게 풀릴 줄 알았지만 ?
+없다. 아무것도.
+진짜 아무것도 없는지 ls 명령의 -a 옵션을 이용해 숨겨진건 없는지 확인해보자. (-l 로 상세히 확인 가능)
+
+하이 ㅎ
+뭔가 있다 ㅎ
+파일명이...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/28/2025-07-28-Bandit-3/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-07-28-Natas-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -609,7 +708,7 @@ No more information leaks!! Not even Google will find it this time…
    
 
 
-<article id="post-2025-07-28-Bandit-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-07-27-Natas-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -620,7 +719,7 @@ No more information leaks!! Not even Google will find it this time…
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/28/2025-07-28-Bandit-3/">Bandit 3</a>
+        <a class="p-name article-title" href="/2025/07/27/2025-07-27-Natas-2/">Natas 2</a>
       </h1>
     
   
@@ -628,55 +727,58 @@ No more information leaks!! Not even Google will find it this time…
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-27T15:00:00.000Z" itemprop="datePublished">2025-07-28</time>
+  <time class="dt-published" datetime="2025-07-26T15:00:00.000Z" itemprop="datePublished">2025-07-27</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            643 words 
+            1.7k words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ls-options/" rel="tag">ls options</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directory-listing/" rel="tag">directory listing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Bandit 3 / write-up
+              Natas 2 / write-up
 
-bandit 3 레벨 접속 패스워드 : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+접속 정보
 
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
+URL : http://natas2.natas.labs.overthewire.org
+사용자 이름 : natas2
+비밀번호 : TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
 
-이번에는 파란 글씨다?
-리스트의 -l 옵션을 사용해서 자세히 보자.
 
-drwxr-xr-x 라고 되어 있는데, d는 디렉토리의 약자다.
-현재 작업하고 있는 디렉토리는
+접속하면,
 
-/home/bandit3 이다.
-inhere에 플래그가 있을 것 같으니 작업(명령어를 수행)할 디렉토리를 변경해주겠다.
-cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있는 inhere로 작업 디렉토리를 변경한다.
 
-(변경된 모습)
-이제 여기서 다시 ls를 입력해 뭐가 들어있나 보자.
+There is nothing on this page
 
-? 쉽게 풀릴 줄 알았지만 ?
-없다. 아무것도.
-진짜 아무것도 없는지 ls 명령의 -a 옵션을 이용해 숨겨진건 없는지 확인해보자. (-l 로 상세히 확인 가능)
+이 페이지에는 아무것도 없댄다…
+음… 어떻게 해야할까?
+어떻게 해야할지 모르겠지만… 우리가 할 수 있는 최선을 다해보자.
 
-하이 ㅎ
-뭔가 있다 ㅎ
-파일명이...
+이 페이지에 없다는 건 다른 페이지에는 뭔가 있다는 건가?
+
+일단 우리가 지금 할 줄 아는건 개발자 도구를 여는 것 밖에 없으니 이거라도 해보자.
+
+진짜 없다…
+근데 아까는 없던 files 라는 디렉토리가 보인다.
+files 폴더 바로 왼쪽에 화살표를 눌러 뭐가 있는지 보면,
+
+pixel.png 라는 1x1 픽셀 이미지가 있다. (픽셀이라 보이지도 않는다…)
+이게 도대체 뭐인가 해서 소스코드를 보니.
+
+문제 페이지에 왜인지 모르겠지만 요 쪼꼬미 이미지를 불...
             
           </div>
         
@@ -688,7 +790,7 @@ cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있�
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/07/28/2025-07-28-Bandit-3/" 
+      href="/2025/07/27/2025-07-27-Natas-2/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -782,108 +884,6 @@ flag : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
     <a class="right-panel  non-pic  "
       
       href="/2025/07/27/2025-07-27-Bandit-2/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-07-27-Natas-2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/27/2025-07-27-Natas-2/">Natas 2</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-26T15:00:00.000Z" itemprop="datePublished">2025-07-27</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.7k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/directory-listing/" rel="tag">directory listing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Natas 2 / write-up
-
-접속 정보
-
-URL : http://natas2.natas.labs.overthewire.org
-사용자 이름 : natas2
-비밀번호 : TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
-
-
-접속하면,
-
-
-There is nothing on this page
-
-이 페이지에는 아무것도 없댄다…
-음… 어떻게 해야할까?
-어떻게 해야할지 모르겠지만… 우리가 할 수 있는 최선을 다해보자.
-
-이 페이지에 없다는 건 다른 페이지에는 뭔가 있다는 건가?
-
-일단 우리가 지금 할 줄 아는건 개발자 도구를 여는 것 밖에 없으니 이거라도 해보자.
-
-진짜 없다…
-근데 아까는 없던 files 라는 디렉토리가 보인다.
-files 폴더 바로 왼쪽에 화살표를 눌러 뭐가 있는지 보면,
-
-pixel.png 라는 1x1 픽셀 이미지가 있다. (픽셀이라 보이지도 않는다…)
-이게 도대체 뭐인가 해서 소스코드를 보니.
-
-문제 페이지에 왜인지 모르겠지만 요 쪼꼬미 이미지를 불...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/27/2025-07-27-Natas-2/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
