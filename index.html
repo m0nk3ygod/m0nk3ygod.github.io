@@ -47,36 +47,37 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
   <script>
-(function () {
-  // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-  window.__BUILD_ID__ = 1754905749141;
-  const KEY = 'last_build_id';
-  const last = Number(localStorage.getItem(KEY) || 0);
-  const now  = Number(window.__BUILD_ID__ || Date.now());
-  if (!last || last !== now) {
-    // 2) 서비스워커/Cache Storage 비우기 (원점의 캐시만)
-    Promise.resolve().then(async () => {
-      if ('serviceWorker' in navigator) {
-        const regs = await navigator.serviceWorker.getRegistrations();
-        for (const r of regs) await r.unregister();
-      }
-      if ('caches' in window) {
-        const keys = await caches.keys();
-        await Promise.all(keys.map(k => caches.delete(k)));
-      }
-    }).then(() => {
-      // 3) HTTP 캐시는 못 지우므로, 쿼리 파라미터로 강제 새 요청
-      const url = new URL(location.href);
-      url.searchParams.set('_r', String(now));
-      localStorage.setItem(KEY, String(now));
-      location.replace(url.toString()); // 1회만 새로고침
-    }).catch(() => {
-      localStorage.setItem(KEY, String(now));
-    });
-  }
-})();
-</script>
+  (function () {
+    // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
+    window.__BUILD_ID__ = 1754905945923;
+    const KEY = 'last_build_id';
+    const last = Number(localStorage.getItem(KEY) || 0);
+    const now  = Number(window.__BUILD_ID__ || Date.now());
+    if (!last || last !== now) {
+      // 2) 서비스워커/Cache Storage 비우기 (원점의 캐시만)
+      Promise.resolve().then(async () => {
+        if ('serviceWorker' in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          for (const r of regs) await r.unregister();
+        }
+        if ('caches' in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      }).then(() => {
+        // 3) HTTP 캐시는 못 지우므로, 쿼리 파라미터로 강제 새 요청
+        const url = new URL(location.href);
+        url.searchParams.set('_r', String(now));
+        localStorage.setItem(KEY, String(now));
+        location.replace(url.toString()); // 1회만 새로고침
+      }).catch(() => {
+        localStorage.setItem(KEY, String(now));
+      });
+    }
+  })();
+  </script>
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -203,16 +204,6 @@
                 <div class="category-count">9</div>
             </a>
         </div></div>
-            <a class="category-link" href="/categories/Dreamhack/">
-                Dreamhack
-                <div class="category-count">3</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Wargame/">
-                Wargame
-                <div class="category-count">3</div>
-            </a>
-        </div></div>
             <a class="category-link" href="/categories/Tech/">
                 Tech
                 <div class="category-count">1</div>
@@ -221,6 +212,16 @@
             <a class="category-link" href="/categories/Tech/Linux/">
                 Linux
                 <div class="category-count">1</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Dreamhack/">
+                Dreamhack
+                <div class="category-count">3</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Dreamhack/Wargame/">
+                Wargame
+                <div class="category-count">3</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/picoCTF/">
@@ -288,15 +289,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
             <div class="recent-link-text">
-              (Easy) WebDecode
+              (Easy) Scavenger Hunt
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" title="(Easy) where are the robots" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-logon/" title="(Easy) logon" >
             <div class="recent-link-text">
-              (Easy) where are the robots
+              (Easy) logon
             </div>
           </a>
         
@@ -602,206 +603,6 @@ Description 에서 뭔가 힌트 얻을게 없어보여서 바로 문제에 접�
    
 
 
-<article id="post-2025-08-11-picoCTF-WebDecode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/">(Easy) WebDecode</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            876 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebDecode/" rel="tag">WebDecode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : WebDecode
-
-
-
-[Description]
-웹 검사 도구(Web Inspector) 사용법을 알고 있나요?
-
-Description 을 읽어보면 &quot;Web Inspector&quot;의 사용법을 아냐고 물어보고 있다.
-
-### Web Inspector
-웹 검사 도구란, 웹사이트의 구조와 동작을 분석하거나 수정해볼 수 있는 도구로,
-개발자 도구를 열어서 해당 도구를 사용해볼 수 있다.
-개발자 도구를 여는 단축키는 F12 이다.
-
-이제 문제에 접속해보자!
-
-접속해보면 약간 정신없어보이는(?) 페이지를 볼 수 있다.
-
-해당 페이지는 총 3개의 페이지로 이동할 수 있었는데,  
-HOME, ABOUT, CONTACT
-이렇게 3개이다.
-다른 페이지도 구경해보자.
-
-(ABOUT)
-
-(CONTACT)
-어…
-일단 도움이 되는 정보는 없는 것 같다. (응원 메세지만 가득하다.)
-...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-where-are-the-robots" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/">(Easy) where are the robots</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            825 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/where-are-the-robots/" rel="tag">where are the robots</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : where are the robots
-
-
-
-[Description]
-당신은 로봇들을 찾을 수 있나요?
-
-Description을 보면 로봇이라는 말이 나온다.
-로봇을 언급하는거보니 robots.txt 를 이용해야함을 어느정도 유추해 볼 수 있다.
-robots.txt
-robots.txt 파일이란, 웹사이트의 루트 디렉토리에 위치하는 텍스트 파일로,
-검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고,
-어떤 페이지는 수집하지 말아야 하는지 지시하는 역할을 한다.
-자세한 내용은 공식 문서 참고
-(https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko)
-
-우선 문제에 접속해봤다.
-
-ㄷㄷㄷ 무섭다…
-로봇이 어디있냐고 물어보고 있다.
-주...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
 <article id="post-2025-08-11-picoCTF-Scavenger-Hunt" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -881,96 +682,6 @@ Elements 탭에서 HTML 구조를 확인하고 있었는데…
     <a class="right-panel  non-pic  "
       
       href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-n0s4n1ty-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/">(Easy) n0s4n1ty 1</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.8k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n0s4n1ty-1/" rel="tag">n0s4n1ty 1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : n0s4n1ty 1
-
-
-
-[Description]
-한 개발자가 웹사이트에 프로필 사진 업로드 기능을 추가했지만, 이 구현에는 결함이 있습니다. 이로 인해 당신에게 기회가 생겼습니다.
-당신의 임무는 (수락한다면) 제공된 웹 페이지에 접속해 파일 업로드 영역을 찾아내는 것입니다. 궁극적인 목표는 /root 디렉터리에 숨겨진 플래그를 찾는 것입니다.
-
-일단 Description 만 읽었을 때는 &quot;파일 업로드&quot;라는 단어가 자꾸 걸린다…
-(파일 업로드 취약점이 먹힐 것 같은 느낌…)
-우선 우측 상단에 Launch Instance를 클릭해서 문제 접속을 위한 인스턴스를 생성하고,
-생성한 링크에 접속해보자.
-
-링크에 접속하면 사진과 같은 화면을 볼 수 있는데,
-파일 선택을 통해 업로드할 파일을 지정하고, Upload Profile 버튼을 누르면 해당 파일이 서버에 업...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -1090,7 +801,7 @@ Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아
    
 
 
-<article id="post-2025-08-08-Dreamhack-Wargame-Beginner-pathtraversal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-08-11-picoCTF-WebDecode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -1101,7 +812,7 @@ Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-pathtraversal/">🔒 (B) pathtraversal</a>
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/">(Easy) WebDecode</a>
       </h1>
     
   
@@ -1109,27 +820,62 @@ Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-07T15:00:00.000Z" itemprop="datePublished">2025-08-08</time>
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Dreamhack/">Dreamhack</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/">Wargame</a>
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            2.9k words 
+            876 words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dreamhack/" rel="tag">dreamhack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pathtraversal/" rel="tag">pathtraversal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssrf/" rel="tag">ssrf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wargame/" rel="tag">wargame</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebDecode/" rel="tag">WebDecode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          해당글은 비밀글 입니다.
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : WebDecode
+
+
+
+[Description]
+웹 검사 도구(Web Inspector) 사용법을 알고 있나요?
+
+Description 을 읽어보면 &quot;Web Inspector&quot;의 사용법을 아냐고 물어보고 있다.
+
+### Web Inspector
+웹 검사 도구란, 웹사이트의 구조와 동작을 분석하거나 수정해볼 수 있는 도구로,
+개발자 도구를 열어서 해당 도구를 사용해볼 수 있다.
+개발자 도구를 여는 단축키는 F12 이다.
+
+이제 문제에 접속해보자!
+
+접속해보면 약간 정신없어보이는(?) 페이지를 볼 수 있다.
+
+해당 페이지는 총 3개의 페이지로 이동할 수 있었는데,  
+HOME, ABOUT, CONTACT
+이렇게 3개이다.
+다른 페이지도 구경해보자.
+
+(ABOUT)
+
+(CONTACT)
+어…
+일단 도움이 되는 정보는 없는 것 같다. (응원 메세지만 가득하다.)
+...
+            
+          </div>
         
       </div>
 
@@ -1139,7 +885,193 @@ Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-pathtraversal/" 
+      href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-n0s4n1ty-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/">(Easy) n0s4n1ty 1</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.8k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n0s4n1ty-1/" rel="tag">n0s4n1ty 1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : n0s4n1ty 1
+
+
+
+[Description]
+한 개발자가 웹사이트에 프로필 사진 업로드 기능을 추가했지만, 이 구현에는 결함이 있습니다. 이로 인해 당신에게 기회가 생겼습니다.
+당신의 임무는 (수락한다면) 제공된 웹 페이지에 접속해 파일 업로드 영역을 찾아내는 것입니다. 궁극적인 목표는 /root 디렉터리에 숨겨진 플래그를 찾는 것입니다.
+
+일단 Description 만 읽었을 때는 &quot;파일 업로드&quot;라는 단어가 자꾸 걸린다…
+(파일 업로드 취약점이 먹힐 것 같은 느낌…)
+우선 우측 상단에 Launch Instance를 클릭해서 문제 접속을 위한 인스턴스를 생성하고,
+생성한 링크에 접속해보자.
+
+링크에 접속하면 사진과 같은 화면을 볼 수 있는데,
+파일 선택을 통해 업로드할 파일을 지정하고, Upload Profile 버튼을 누르면 해당 파일이 서버에 업...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-where-are-the-robots" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/">(Easy) where are the robots</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            825 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/where-are-the-robots/" rel="tag">where are the robots</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : where are the robots
+
+
+
+[Description]
+당신은 로봇들을 찾을 수 있나요?
+
+Description을 보면 로봇이라는 말이 나온다.
+로봇을 언급하는거보니 robots.txt 를 이용해야함을 어느정도 유추해 볼 수 있다.
+robots.txt
+robots.txt 파일이란, 웹사이트의 루트 디렉토리에 위치하는 텍스트 파일로,
+검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고,
+어떤 페이지는 수집하지 말아야 하는지 지시하는 역할을 한다.
+자세한 내용은 공식 문서 참고
+(https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko)
+
+우선 문제에 접속해봤다.
+
+ㄷㄷㄷ 무섭다…
+로봇이 어디있냐고 물어보고 있다.
+주...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -1209,6 +1141,75 @@ Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아
     <a class="right-panel  non-pic  "
       
       href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-session/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-08-Dreamhack-Wargame-Beginner-pathtraversal" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-pathtraversal/">🔒 (B) pathtraversal</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-07T15:00:00.000Z" itemprop="datePublished">2025-08-08</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Dreamhack/">Dreamhack</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/">Wargame</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.9k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dreamhack/" rel="tag">dreamhack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pathtraversal/" rel="tag">pathtraversal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssrf/" rel="tag">ssrf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wargame/" rel="tag">wargame</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          해당글은 비밀글 입니다.
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-pathtraversal/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>

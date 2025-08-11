@@ -65,36 +65,37 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
   <script>
-(function () {
-  // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-  window.__BUILD_ID__ = 1754905749116;
-  const KEY = 'last_build_id';
-  const last = Number(localStorage.getItem(KEY) || 0);
-  const now  = Number(window.__BUILD_ID__ || Date.now());
-  if (!last || last !== now) {
-    // 2) 서비스워커/Cache Storage 비우기 (원점의 캐시만)
-    Promise.resolve().then(async () => {
-      if ('serviceWorker' in navigator) {
-        const regs = await navigator.serviceWorker.getRegistrations();
-        for (const r of regs) await r.unregister();
-      }
-      if ('caches' in window) {
-        const keys = await caches.keys();
-        await Promise.all(keys.map(k => caches.delete(k)));
-      }
-    }).then(() => {
-      // 3) HTTP 캐시는 못 지우므로, 쿼리 파라미터로 강제 새 요청
-      const url = new URL(location.href);
-      url.searchParams.set('_r', String(now));
-      localStorage.setItem(KEY, String(now));
-      location.replace(url.toString()); // 1회만 새로고침
-    }).catch(() => {
-      localStorage.setItem(KEY, String(now));
-    });
-  }
-})();
-</script>
+  (function () {
+    // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
+    window.__BUILD_ID__ = 1754905945896;
+    const KEY = 'last_build_id';
+    const last = Number(localStorage.getItem(KEY) || 0);
+    const now  = Number(window.__BUILD_ID__ || Date.now());
+    if (!last || last !== now) {
+      // 2) 서비스워커/Cache Storage 비우기 (원점의 캐시만)
+      Promise.resolve().then(async () => {
+        if ('serviceWorker' in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          for (const r of regs) await r.unregister();
+        }
+        if ('caches' in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      }).then(() => {
+        // 3) HTTP 캐시는 못 지우므로, 쿼리 파라미터로 강제 새 요청
+        const url = new URL(location.href);
+        url.searchParams.set('_r', String(now));
+        localStorage.setItem(KEY, String(now));
+        location.replace(url.toString()); // 1회만 새로고침
+      }).catch(() => {
+        localStorage.setItem(KEY, String(now));
+      });
+    }
+  })();
+  </script>
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -221,16 +222,6 @@
                 <div class="category-count">9</div>
             </a>
         </div></div>
-            <a class="category-link" href="/categories/Dreamhack/">
-                Dreamhack
-                <div class="category-count">3</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Wargame/">
-                Wargame
-                <div class="category-count">3</div>
-            </a>
-        </div></div>
             <a class="category-link" href="/categories/Tech/">
                 Tech
                 <div class="category-count">1</div>
@@ -239,6 +230,16 @@
             <a class="category-link" href="/categories/Tech/Linux/">
                 Linux
                 <div class="category-count">1</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Dreamhack/">
+                Dreamhack
+                <div class="category-count">3</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Dreamhack/Wargame/">
+                Wargame
+                <div class="category-count">3</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/picoCTF/">
@@ -306,15 +307,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
             <div class="recent-link-text">
-              (Easy) WebDecode
+              (Easy) Scavenger Hunt
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" title="(Easy) where are the robots" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-logon/" title="(Easy) logon" >
             <div class="recent-link-text">
-              (Easy) where are the robots
+              (Easy) logon
             </div>
           </a>
         
@@ -505,13 +506,13 @@ $ecnodedSecret(=3d3d516343746d4d6d6c315669563362)이 일치하는지 확인한�
   </a>
   <a class="article-nav-btn right "
     
-      href="/2025/08/05/2025-08-05-Bandit-7/"
-      title="Bandit 7"
+      href="/2025/08/05/2025-08-05-Natas-7/"
+      title="Natas 7"
      >
 
     <p class="title-text">
       
-        Bandit 7
+        Natas 7
         
     </p>
     <i class="fa-solid fa-angle-right"></i>
