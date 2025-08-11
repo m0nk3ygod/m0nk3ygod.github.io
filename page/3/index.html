@@ -10,6 +10,11 @@
 <head>
   <meta charset="utf-8">
   
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+
+  
   
   
 
@@ -161,24 +166,14 @@
                 <div class="category-count">18</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Bandit/">
-                Bandit
-                <div class="category-count">9</div>
-            </a>
-        
             <a class="category-link" href="/categories/Overthewire/Natas/">
                 Natas
                 <div class="category-count">9</div>
             </a>
-        </div></div>
-            <a class="category-link" href="/categories/Dreamhack/">
-                Dreamhack
-                <div class="category-count">3</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Wargame/">
-                Wargame
-                <div class="category-count">3</div>
+        
+            <a class="category-link" href="/categories/Overthewire/Bandit/">
+                Bandit
+                <div class="category-count">9</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Tech/">
@@ -189,6 +184,16 @@
             <a class="category-link" href="/categories/Tech/Linux/">
                 Linux
                 <div class="category-count">1</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Dreamhack/">
+                Dreamhack
+                <div class="category-count">3</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Dreamhack/Wargame/">
+                Wargame
+                <div class="category-count">3</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/picoCTF/">
@@ -244,9 +249,9 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-logon/" title="(Easy) logon" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
             <div class="recent-link-text">
-              (Easy) logon
+              (Easy) Cookies
             </div>
           </a>
         
@@ -256,15 +261,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
-            <div class="recent-link-text">
-              (Easy) Cookies
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
             <div class="recent-link-text">
               (Easy) Scavenger Hunt
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/" title="(Easy) n0s4n1ty 1" >
+            <div class="recent-link-text">
+              (Easy) n0s4n1ty 1
             </div>
           </a>
         
@@ -870,105 +875,6 @@ pixel.png 라는 1x1 픽셀 이미지가 있다. (픽셀이라 보이지도 않�
    
 
 
-<article id="post-2025-07-26-Bandit-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/26/2025-07-26-Bandit-1/">Bandit 1</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-25T15:00:00.000Z" itemprop="datePublished">2025-07-26</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            754 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/how-to-cat/" rel="tag">how to cat -</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Bandit 1 / write-up
-bandit 1 레벨 접속 패스워드 : ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
-
-이번 문제도 접속하고 플래그를 찾으러 가보겠다.
-일단 뭐가 있나 확인해보니…
-
-“-” 이 친구가 파일 이름인 거 같다.
-그냥 읽으려고 하면,
-
-입력을 무한정 기다린다.
-왜 이런가?
-
-(빌드업)
-리눅스 명령어는 옵션 또는 인자를 필요로 하는 명령어들이 존재한다.
-명령어와 옵션을 함께 사용하면 더욱 다양하고 풍부한 작업을 수행할 수 있게 된다.
-그 옵션은 어떻게 사용하는가?
-바로 위에서 접속하자마자 파일들을 확인할 때 사용한 명령어를 혹시 보았는가?
-
-ls 옆에 -al 이라는 게 붙었다.
-이게 바로 옵션이다.
-
-a는 숨김 파일(또는 디렉토리)까지 전부 보여달라는 의미이고,
-l은 상세 리스트로 보여달라는 의미이다.
-
-a와 l을 위 2가지 의미로 ls 명령에 전달하기 위해서는 “-” 요녀석을 사용해서 옵션임을 명시해야한다.
-
-그렇다면…? 왜 무한정 기...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/26/2025-07-26-Bandit-1/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
 <article id="post-2025-07-26-Natas-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -1054,6 +960,105 @@ flag : TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
     <a class="right-panel  non-pic  "
       
       href="/2025/07/26/2025-07-26-Natas-1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-07-26-Bandit-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/26/2025-07-26-Bandit-1/">Bandit 1</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-25T15:00:00.000Z" itemprop="datePublished">2025-07-26</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            754 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/how-to-cat/" rel="tag">how to cat -</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Bandit 1 / write-up
+bandit 1 레벨 접속 패스워드 : ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+이번 문제도 접속하고 플래그를 찾으러 가보겠다.
+일단 뭐가 있나 확인해보니…
+
+“-” 이 친구가 파일 이름인 거 같다.
+그냥 읽으려고 하면,
+
+입력을 무한정 기다린다.
+왜 이런가?
+
+(빌드업)
+리눅스 명령어는 옵션 또는 인자를 필요로 하는 명령어들이 존재한다.
+명령어와 옵션을 함께 사용하면 더욱 다양하고 풍부한 작업을 수행할 수 있게 된다.
+그 옵션은 어떻게 사용하는가?
+바로 위에서 접속하자마자 파일들을 확인할 때 사용한 명령어를 혹시 보았는가?
+
+ls 옆에 -al 이라는 게 붙었다.
+이게 바로 옵션이다.
+
+a는 숨김 파일(또는 디렉토리)까지 전부 보여달라는 의미이고,
+l은 상세 리스트로 보여달라는 의미이다.
+
+a와 l을 위 2가지 의미로 ls 명령에 전달하기 위해서는 “-” 요녀석을 사용해서 옵션임을 명시해야한다.
+
+그렇다면…? 왜 무한정 기...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/26/2025-07-26-Bandit-1/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
