@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-07-19-25-12.png">
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-07-19-32-26.png">
 <meta property="article:published_time" content="2025-08-10T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-11T08:25:47.430Z">
+<meta property="article:modified_time" content="2025-08-12T07:07:55.156Z">
 <meta property="article:author" content="Seungwon Lee">
 <meta property="article:tag" content="picoctf">
 <meta property="article:tag" content="web hacking">
@@ -73,7 +73,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1754967088946;
+    window.__BUILD_ID__ = 1754982526887;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -216,13 +216,13 @@
                 <div class="category-count">20</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
+            <a class="category-link" href="/categories/Overthewire/Bandit/">
+                Bandit
                 <div class="category-count">10</div>
             </a>
         
-            <a class="category-link" href="/categories/Overthewire/Bandit/">
-                Bandit
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
                 <div class="category-count">10</div>
             </a>
         </div></div>
@@ -236,16 +236,6 @@
                 <div class="category-count">3</div>
             </a>
         </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
-            </a>
-        </div></div>
             <a class="category-link" href="/categories/picoCTF/">
                 picoCTF
                 <div class="category-count">8</div>
@@ -254,6 +244,16 @@
             <a class="category-link" href="/categories/picoCTF/Web-Exploitation/">
                 Web Exploitation
                 <div class="category-count">8</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
@@ -305,21 +305,21 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
-            <div class="recent-link-text">
-              (Easy) Cookies
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
             <div class="recent-link-text">
               (Easy) Cookie Monster Secret Recipe
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
             <div class="recent-link-text">
-              (Easy) Scavenger Hunt
+              (Easy) WebDecode
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
+            <div class="recent-link-text">
+              (Easy) Includes
             </div>
           </a>
         
@@ -395,8 +395,8 @@
 <p><img src="/assets/img/picoCTF/2025-08-07-17-02-29.png" alt="sh figure3"></p>
 <p>이런게 출력된다.</p>
 <br>
-이것말고는 딱히 다른 기능은 없어보이니 바로 개발자도구를 켜서 정보들을 얻어보자.  
-(개발자 도구 - F12 or 페이지 빈 곳 우클릭 - 검사)
+<p>이것말고는 딱히 다른 기능은 없어보이니 바로 개발자도구를 켜서 정보들을 얻어보자.<br>
+(개발자 도구 - F12 or 페이지 빈 곳 우클릭 - 검사)</p>
 <p><img src="/assets/img/picoCTF/2025-08-07-17-05-36.png" alt="sh figure4"></p>
 <p><code>Elements</code> 탭에서 HTML 구조를 확인하고 있었는데…</p>
 <p><img src="/assets/img/picoCTF/2025-08-07-17-05-50.png" alt="sh figure5"></p>
@@ -404,19 +404,19 @@
 <p>아무래도 사이트 곳곳에 몇개의 파트로 플래그가 쪼개져서 숨겨져있고,</p>
 <p>이걸 전부 찾아 조합하면 되는 것 같다.</p>
 <br>
-그래서 숨겨져있는 곳이 어디일까 생각하며 HTML 구조를 쭉 봤는데,
+<p>그래서 숨겨져있는 곳이 어디일까 생각하며 HTML 구조를 쭉 봤는데,</p>
 <p><img src="/assets/img/picoCTF/2025-08-07-17-10-42.png" alt="sh figure6"></p>
 <p><code>mycss.css</code>, <code>myjs.js</code> 와 같이 사용자가 정의한 것처럼 보이는 파일들을 불러와 사용하고 있는 것을 볼 수 있었고,</p>
 <p>주소창에 해당 파일들을 입력해 접근해봤다.</p>
 <br>
-먼저 `mycss.css`부터 확인해 봤다.
+<p>먼저 <code>mycss.css</code>부터 확인해 봤다.</p>
 <p><code>http://mercury.picoctf.net:39491/mycss.css</code></p>
 <p><img src="/assets/img/picoCTF/2025-08-07-17-13-45.png" alt="sh figure7"></p>
 <p>내용을 확인해보면, 맨 마지막줄에</p>
 <p><img src="/assets/img/picoCTF/2025-08-07-17-14-06.png" alt="sh figure7"></p>
 <p>이렇게 2번째 플래그 조각을 찾을 수 있었다.</p>
 <br>
-그래서 바로 `myjs.js` 파일도 확인해봤다.
+<p>그래서 바로 <code>myjs.js</code> 파일도 확인해봤다.</p>
 <p><code>http://mercury.picoctf.net:39491/myjs.js</code></p>
 <p><img src="/assets/img/picoCTF/2025-08-07-17-15-00.png" alt="sh figure8"></p>
 <p>여기는 플래그가 따로 보이지 않았다…</p>
@@ -426,6 +426,7 @@
 <p>구글이 저의 웹사이트를 검색 결과에 노출하지 않게 하려면 어떻게 해야 할까요?</p>
 </blockquote>
 <p>라는 주석이 있었다.</p>
+<br>
 <h3 id="robots.txt" tabindex="-1" id="robots-txt">robots.txt</h3>
 <p><code>robots.txt</code> 파일이란, 웹사이트의 루트 디렉토리에 위치하는 <strong>텍스트 파일</strong>로,<br>
 검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고,<br>
@@ -433,7 +434,7 @@
 <p>자세한 내용은 공식 문서 참고<br>
 (<a target="_blank" rel="noopener" href="https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko">https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko</a>)</p>
 <br>
-해당 주석을 통해 `robots.txt` 파일이 존재한다는 힌트를 얻었고,  
+<p>해당 주석을 통해 <code>robots.txt</code> 파일이 존재한다는 힌트를 얻었고,</p>
 <p>바로 <code>robots.txt</code> 파일에 접근해봤다.</p>
 <p><img src="/assets/img/picoCTF/2025-08-07-17-22-20.png" alt="sh figure9"></p>
 <p>확인해보니, 3번째 플래그 조각을 찾을 수 있었다.</p>
@@ -445,6 +446,7 @@
 <p>아파치 서버라는 힌트와 함께 플래그에 “접근” 할 수 있는지 물어보고 있다.</p>
 <p>아마 아파치 웹 서버에서만 사용되는 파일에 있다는 말인 것 같고,<br>
 접근이라는 말을 들었을 때 <code>.htaccess</code> 파일이 생각났다.</p>
+<br>
 <h3 id=".htaccess" tabindex="-1" id="htaccess">.htaccess</h3>
 <p>.htaccess (Hypertext Access) 는 <strong>Apache 웹 서버</strong>에서 디렉터리 단위로 접근 제어 설정을 할 수 있도록 해주는 파일이다.</p>
 <ul>
@@ -459,7 +461,7 @@
 <p><img src="/assets/img/picoCTF/2025-08-07-19-21-20.png" alt="sh figure11"></p>
 <p>4번째 플래그 조각도 찾을 수 있었다.</p>
 <br>
-내부에 또 주석이 보이는데,
+<p>내부에 또 주석이 보이는데,</p>
 <p><img src="/assets/img/picoCTF/2025-08-07-19-25-12.png" alt="sh figure12"></p>
 <blockquote>
 <p>난 맥에서 웹사이트 만드는 걸 정말 좋아해요. 거기에 많은 정보를 저장할 수도 있어서 좋아요.</p>
@@ -467,12 +469,13 @@
 <p>이 사람은 맥(MacOS)를 이용해서 해당 사이트를 개발한 것 같다.</p>
 <p>그리고 저장을 굳이 &quot;Store&quot;라고 언급한 것을 볼 수 있는데, (심지어 S는 대문자로 표기함.)</p>
 <p>이것들을 조합하면 <code>.DS_Store</code> 라는 파일을 떠올릴 수 있다.</p>
+<br>
 <h3 id=".ds_store" tabindex="-1" id="DS-Store">.DS_Store</h3>
 <p>.DS_Store (Desktop Services Store) 는 macOS에서 디렉터리를 열면 자동으로 생성되는 숨김 파일이다.</p>
 <p>Finder (Windows의 익스플로러 같은 앱) 가 해당 폴더의 <strong>아이콘 위치, 보기 설정</strong> 등 메타 데이터를 저장하기 위해 만들게 된다.</p>
 <p>웹 사이트를 작업할 때, 맥 사용자가 이 파일을 실수로 서버에 업로드 하는 경우가 종종 있다.</p>
 <br>
-그래서 이 파일도 접근해보면,
+<p>그래서 이 파일도 접근해보면,</p>
 <p><code>http://mercury.picoctf.net:39491/.DS_Store</code></p>
 <p><img src="/assets/img/picoCTF/2025-08-07-19-32-26.png" alt="sh figure13"></p>
 <p>마지막 5번째 플래그 조각도 찾을 수 있다!</p>
@@ -493,25 +496,25 @@
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/"
-      title="(Easy) Cookie Monster Secret Recipe"
+      href="/2025/08/11/2025-08-11-picoCTF-Cookies/"
+      title="(Easy) Cookies"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
       
-        (Easy) Cookie Monster Secret Recipe
+        (Easy) Cookies
         
     </p>
   </a>
   <a class="article-nav-btn right "
     
-      href="/2025/08/11/2025-08-11-picoCTF-WebDecode/"
-      title="(Easy) WebDecode"
+      href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/"
+      title="(Easy) n0s4n1ty 1"
      >
 
     <p class="title-text">
       
-        (Easy) WebDecode
+        (Easy) n0s4n1ty 1
         
     </p>
     <i class="fa-solid fa-angle-right"></i>

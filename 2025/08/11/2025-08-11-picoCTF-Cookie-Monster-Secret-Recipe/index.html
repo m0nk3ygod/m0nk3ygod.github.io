@@ -34,12 +34,12 @@
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-05-14-49-31.png">
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-05-14-54-44.png">
 <meta property="article:published_time" content="2025-08-10T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-11T08:26:13.177Z">
+<meta property="article:modified_time" content="2025-08-12T07:06:37.451Z">
 <meta property="article:author" content="Seungwon Lee">
 <meta property="article:tag" content="picoctf">
+<meta property="article:tag" content="cookie monster secret recipe">
 <meta property="article:tag" content="web hacking">
 <meta property="article:tag" content="write-up">
-<meta property="article:tag" content="cookie monster secret recipe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-05-14-41-00.png">
   
@@ -63,7 +63,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1754967088947;
+    window.__BUILD_ID__ = 1754982526884;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -206,13 +206,13 @@
                 <div class="category-count">20</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
+            <a class="category-link" href="/categories/Overthewire/Bandit/">
+                Bandit
                 <div class="category-count">10</div>
             </a>
         
-            <a class="category-link" href="/categories/Overthewire/Bandit/">
-                Bandit
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
                 <div class="category-count">10</div>
             </a>
         </div></div>
@@ -226,16 +226,6 @@
                 <div class="category-count">3</div>
             </a>
         </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
-            </a>
-        </div></div>
             <a class="category-link" href="/categories/picoCTF/">
                 picoCTF
                 <div class="category-count">8</div>
@@ -244,6 +234,16 @@
             <a class="category-link" href="/categories/picoCTF/Web-Exploitation/">
                 Web Exploitation
                 <div class="category-count">8</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
@@ -295,21 +295,21 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
-            <div class="recent-link-text">
-              (Easy) Cookies
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
             <div class="recent-link-text">
               (Easy) Cookie Monster Secret Recipe
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
             <div class="recent-link-text">
-              (Easy) Scavenger Hunt
+              (Easy) WebDecode
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
+            <div class="recent-link-text">
+              (Easy) Includes
             </div>
           </a>
         
@@ -357,7 +357,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            791 words 
+            795 words 
           </div>
         </div>
         
@@ -374,8 +374,8 @@
 <p><img src="/assets/img/picoCTF/2025-08-05-14-41-00.png" alt="CMSR figure1"></p>
 <blockquote>
 <p>[Description]<br>
-쿠키 몬스터가 자신의 최고 비밀 쿠키 레시피를 웹사이트 어딘가에 숨겨두었어요.
-당신은 열정 넘치는 쿠키 탐정!
+쿠키 몬스터가 자신의 최고 비밀 쿠키 레시피를 웹사이트 어딘가에 숨겨두었어요.<br>
+당신은 열정 넘치는 쿠키 탐정!<br>
 이 맛있는 비밀을 찾아낼 수 있을까요?</p>
 </blockquote>
 <p>Description에 쿠키라는 말이 반복되는 것을 보니 &quot;Cookie/Session&quot;과 관련있는 문제인가 보다.</p>
@@ -385,7 +385,7 @@
 <p><img src="/assets/img/picoCTF/2025-08-05-14-46-41.png" alt="CMSR figure3"></p>
 <p>권한이 없다고 한다. (당연함.)</p>
 <p>그리고 출력된 내용은 다음과 같다.</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">쿠키 몬스터가 말하길:</span><br><span class="line">“비밀번호 따윈 필요 없어. 쿠키만 있으면 돼!”</span><br><span class="line"></span><br><span class="line">힌트:</span><br><span class="line">“최근에 쿠키(cookie) 확인해봤어?”</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">쿠키 몬스터가 말하길:  </span><br><span class="line">“비밀번호 따윈 필요 없어. 쿠키만 있으면 돼!”</span><br><span class="line"></span><br><span class="line">힌트:  </span><br><span class="line">“최근에 쿠키(cookie) 확인해봤어?”</span><br></pre></td></tr></table></figure>
 <p>바로 개발자 도구에 들어가 쿠키를 확인해봤다.<br>
 (단축키 : F12)</p>
 <p><img src="/assets/img/picoCTF/2025-08-05-14-49-31.png" alt="CMSR figure4"></p>
@@ -413,25 +413,25 @@ base64로 인코딩 된 값임을 유추할 수 있다.</p>
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2025/08/11/2025-08-11-picoCTF-Cookies/"
-      title="(Easy) Cookies"
+      href="/2025/08/12/2025-08-12-Natas-9/"
+      title="Natas 9"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
       
-        (Easy) Cookies
+        Natas 9
         
     </p>
   </a>
   <a class="article-nav-btn right "
     
-      href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/"
-      title="(Easy) Scavenger Hunt"
+      href="/2025/08/11/2025-08-11-picoCTF-WebDecode/"
+      title="(Easy) WebDecode"
      >
 
     <p class="title-text">
       
-        (Easy) Scavenger Hunt
+        (Easy) WebDecode
         
     </p>
     <i class="fa-solid fa-angle-right"></i>

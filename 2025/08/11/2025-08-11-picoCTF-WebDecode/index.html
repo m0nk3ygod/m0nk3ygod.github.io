@@ -21,12 +21,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="picoCTF &#x2F; Web Exploitation  Difficulty Level : Easy Title : WebDecode    [Description] 웹 검사 도구(Web Inspector) 사용법을 알고 있나요?  Description 을 읽어보면 &quot;Web Inspector&quot;의 사용법을 아냐고 물어보고 있다.  ### Web Ins">
+  <meta name="description" content="picoCTF &#x2F; Web Exploitation  Difficulty Level : Easy Title : WebDecode    [Description] 웹 검사 도구(Web Inspector) 사용법을 알고 있나요?  Description 을 읽어보면 &quot;Web Inspector&quot;의 사용법을 아냐고 물어보고 있다.  Web Inspect">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(Easy) WebDecode">
 <meta property="og:url" content="https://m0nk3ygod.github.io/2025/08/11/2025-08-11-picoCTF-WebDecode/index.html">
 <meta property="og:site_name" content="m0nk3ygod&#39;s Blog">
-<meta property="og:description" content="picoCTF &#x2F; Web Exploitation  Difficulty Level : Easy Title : WebDecode    [Description] 웹 검사 도구(Web Inspector) 사용법을 알고 있나요?  Description 을 읽어보면 &quot;Web Inspector&quot;의 사용법을 아냐고 물어보고 있다.  ### Web Ins">
+<meta property="og:description" content="picoCTF &#x2F; Web Exploitation  Difficulty Level : Easy Title : WebDecode    [Description] 웹 검사 도구(Web Inspector) 사용법을 알고 있나요?  Description 을 읽어보면 &quot;Web Inspector&quot;의 사용법을 아냐고 물어보고 있다.  Web Inspect">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-09-34-47.png">
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-09-59-19.png">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-10-39-37.png">
 <meta property="og:image" content="https://m0nk3ygod.github.io/assets/img/picoCTF/2025-08-06-10-39-48.png">
 <meta property="article:published_time" content="2025-08-10T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-11T08:25:40.390Z">
+<meta property="article:modified_time" content="2025-08-12T07:08:16.797Z">
 <meta property="article:author" content="Seungwon Lee">
 <meta property="article:tag" content="picoctf">
 <meta property="article:tag" content="web hacking">
@@ -68,7 +68,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1754967088946;
+    window.__BUILD_ID__ = 1754982526885;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -211,13 +211,13 @@
                 <div class="category-count">20</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
+            <a class="category-link" href="/categories/Overthewire/Bandit/">
+                Bandit
                 <div class="category-count">10</div>
             </a>
         
-            <a class="category-link" href="/categories/Overthewire/Bandit/">
-                Bandit
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
                 <div class="category-count">10</div>
             </a>
         </div></div>
@@ -231,16 +231,6 @@
                 <div class="category-count">3</div>
             </a>
         </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
-            </a>
-        </div></div>
             <a class="category-link" href="/categories/picoCTF/">
                 picoCTF
                 <div class="category-count">8</div>
@@ -249,6 +239,16 @@
             <a class="category-link" href="/categories/picoCTF/Web-Exploitation/">
                 Web Exploitation
                 <div class="category-count">8</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
@@ -300,21 +300,21 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
-            <div class="recent-link-text">
-              (Easy) Cookies
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
             <div class="recent-link-text">
               (Easy) Cookie Monster Secret Recipe
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
             <div class="recent-link-text">
-              (Easy) Scavenger Hunt
+              (Easy) WebDecode
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
+            <div class="recent-link-text">
+              (Easy) Includes
             </div>
           </a>
         
@@ -362,7 +362,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            876 words 
+            868 words 
           </div>
         </div>
         
@@ -383,16 +383,16 @@
 </blockquote>
 <p>Description 을 읽어보면 &quot;Web Inspector&quot;의 사용법을 아냐고 물어보고 있다.</p>
 <br>
-### Web Inspector
+<h3 id="web-inspector" tabindex="-1" id="Web-Inspector">Web Inspector</h3>
 <p>웹 검사 도구란, 웹사이트의 구조와 동작을 분석하거나 수정해볼 수 있는 도구로,<br>
 개발자 도구를 열어서 해당 도구를 사용해볼 수 있다.</p>
 <p>개발자 도구를 여는 단축키는 F12 이다.</p>
 <br>
-이제 문제에 접속해보자!
+<p>이제 문제에 접속해보자!</p>
 <p><img src="/assets/img/picoCTF/2025-08-06-09-59-19.png" alt="webdecode figure2"></p>
 <p>접속해보면 약간 정신없어보이는(?) 페이지를 볼 수 있다.</p>
 <br>
-해당 페이지는 총 3개의 페이지로 이동할 수 있었는데,  
+<p>해당 페이지는 총 3개의 페이지로 이동할 수 있었는데,</p>
 <p><code>HOME</code>, <code>ABOUT</code>, <code>CONTACT</code></p>
 <p>이렇게 3개이다.</p>
 <p>다른 페이지도 구경해보자.</p>
@@ -403,7 +403,7 @@
 <p>어…</p>
 <p>일단 도움이 되는 정보는 없는 것 같다. (응원 메세지만 가득하다.)</p>
 <br>
-그렇다면 이제 웹 검사 도구를 한번 써보자.
+<p>그렇다면 이제 웹 검사 도구를 한번 써보자.</p>
 <p>F12를 눌러 개발자 도구를 열어준다.<br>
 (또는 페이지 빈곳을 우클릭한 뒤, &quot;검사&quot;를 클릭해준다.)</p>
 <p>그리고 Elements 탭에 들어가면, 해당 페이지의 HTML 구조를 볼 수 있다.</p>
@@ -412,7 +412,7 @@
 <p><img src="/assets/img/picoCTF/2025-08-06-10-20-01.png" alt="webdecode figure6"></p>
 <p>딱히 얻을만한 정보는 없었다…</p>
 <br>
-다음으로 `ABOUT` 페이지를 조사해봤는데,
+<p>다음으로 <code>ABOUT</code> 페이지를 조사해봤는데,</p>
 <p><img src="/assets/img/picoCTF/2025-08-06-10-22-53.png" alt="webdecode figure7"></p>
 <p>??!?!?!?!</p>
 <p>section 태그의 notify_true 라는 속성을 보니</p>
@@ -440,13 +440,13 @@
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/"
-      title="(Easy) Scavenger Hunt"
+      href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/"
+      title="(Easy) Cookie Monster Secret Recipe"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
       
-        (Easy) Scavenger Hunt
+        (Easy) Cookie Monster Secret Recipe
         
     </p>
   </a>
