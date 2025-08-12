@@ -51,7 +51,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1754982526911;
+    window.__BUILD_ID__ = 1754982660122;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -214,16 +214,6 @@
                 <div class="category-count">3</div>
             </a>
         </div></div>
-            <a class="category-link" href="/categories/picoCTF/">
-                picoCTF
-                <div class="category-count">8</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/picoCTF/Web-Exploitation/">
-                Web Exploitation
-                <div class="category-count">8</div>
-            </a>
-        </div></div>
             <a class="category-link" href="/categories/Tech/">
                 Tech
                 <div class="category-count">1</div>
@@ -232,6 +222,16 @@
             <a class="category-link" href="/categories/Tech/Linux/">
                 Linux
                 <div class="category-count">1</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/picoCTF/">
+                picoCTF
+                <div class="category-count">8</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/picoCTF/Web-Exploitation/">
+                Web Exploitation
+                <div class="category-count">8</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
@@ -271,15 +271,15 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/12/2025-08-12-Bandit-9/" title="Bandit 9" >
-            <div class="recent-link-text">
-              Bandit 9
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/12/2025-08-12-Natas-9/" title="Natas 9" >
             <div class="recent-link-text">
               Natas 9
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/12/2025-08-12-Bandit-9/" title="Bandit 9" >
+            <div class="recent-link-text">
+              Bandit 9
             </div>
           </a>
         
@@ -289,15 +289,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
-            <div class="recent-link-text">
-              (Easy) WebDecode
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
             <div class="recent-link-text">
               (Easy) Includes
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
+            <div class="recent-link-text">
+              (Easy) Cookies
             </div>
           </a>
         
@@ -652,6 +652,101 @@ View sourececode 를 클릭해 소스코드가 어떻게 되어있는지 확인�
    
 
 
+<article id="post-2025-08-05-Natas-7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/05/2025-08-05-Natas-7/">Natas 7</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-04T15:00:00.000Z" itemprop="datePublished">2025-08-05</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.9k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GET-Method/" rel="tag">GET Method</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LFI/" rel="tag">LFI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic-php/" rel="tag">basic php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Natas 7 / write-up
+
+접속 정보
+
+URL : http://natas7.natas.labs.overthewire.org
+사용자 이름 : natas7
+비밀번호 : bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
+
+
+접속하면,
+
+Home 과 About
+2개의 링크가 보인다.
+Home 부터 접속해보자.
+
+해당 링크로 접속하면 URL에서도 확인할 수 있듯
+서버에 http://natas7.natas.labs.overthewire.org/index.php?page=home 리소스를 요청했음을 알 수 있고,
+페이지에는 응답으로 “this is front page” 라는 문장이 출력했음을 확인할 수 있었다.
+
+다음은 About 페이지에 접속해보았다.
+
+이번에는 서버에 http://natas7.natas.labs.overthewire.org/index.php?page=about 리소스를 요청했음을 알 수 있었고,
+페이지에는 응답으로 “this is the about pa...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/05/2025-08-05-Natas-7/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-08-05-Bandit-7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -732,101 +827,6 @@ man(manual) 명령을 사용해서 쓸만한 명령이 있나 찾아보자.
     <a class="right-panel  non-pic  "
       
       href="/2025/08/05/2025-08-05-Bandit-7/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-05-Natas-7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/05/2025-08-05-Natas-7/">Natas 7</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-04T15:00:00.000Z" itemprop="datePublished">2025-08-05</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.9k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GET-Method/" rel="tag">GET Method</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LFI/" rel="tag">LFI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic-php/" rel="tag">basic php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Natas 7 / write-up
-
-접속 정보
-
-URL : http://natas7.natas.labs.overthewire.org
-사용자 이름 : natas7
-비밀번호 : bmg8SvU1LizuWjx3y7xkNERkHxGre0GS
-
-
-접속하면,
-
-Home 과 About
-2개의 링크가 보인다.
-Home 부터 접속해보자.
-
-해당 링크로 접속하면 URL에서도 확인할 수 있듯
-서버에 http://natas7.natas.labs.overthewire.org/index.php?page=home 리소스를 요청했음을 알 수 있고,
-페이지에는 응답으로 “this is front page” 라는 문장이 출력했음을 확인할 수 있었다.
-
-다음은 About 페이지에 접속해보았다.
-
-이번에는 서버에 http://natas7.natas.labs.overthewire.org/index.php?page=about 리소스를 요청했음을 알 수 있었고,
-페이지에는 응답으로 “this is the about pa...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/05/2025-08-05-Natas-7/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
