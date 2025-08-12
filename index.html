@@ -48,10 +48,10 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
-  <!-- <script>
+  <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1754966974205;
+    window.__BUILD_ID__ = 1754967088997;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -77,7 +77,7 @@
       });
     }
   })();
-  </script> -->
+  </script>
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -204,16 +204,6 @@
                 <div class="category-count">10</div>
             </a>
         </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
-            </a>
-        </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
                 Dreamhack
                 <div class="category-count">3</div>
@@ -222,6 +212,16 @@
             <a class="category-link" href="/categories/Dreamhack/Wargame/">
                 Wargame
                 <div class="category-count">3</div>
+            </a>
+        </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/picoCTF/">
@@ -283,21 +283,21 @@
             </div>
           </a>
         
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
+            <div class="recent-link-text">
+              (Easy) Cookies
+            </div>
+          </a>
+        
           <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
             <div class="recent-link-text">
               (Easy) Cookie Monster Secret Recipe
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Includes/" title="(Easy) Includes" >
+          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" title="(Easy) Scavenger Hunt" >
             <div class="recent-link-text">
-              (Easy) Includes
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookies/" title="(Easy) Cookies" >
-            <div class="recent-link-text">
-              (Easy) Cookies
+              (Easy) Scavenger Hunt
             </div>
           </a>
         
@@ -505,194 +505,6 @@ banana라고 입력하니 사진과 같이 나온다.
    
 
 
-<article id="post-2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/">(Easy) Cookie Monster Secret Recipe</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            791 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie-monster-secret-recipe/" rel="tag">cookie monster secret recipe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : Cookie Monster Secret Recipe
-
-
-
-[Description]
-쿠키 몬스터가 자신의 최고 비밀 쿠키 레시피를 웹사이트 어딘가에 숨겨두었어요.
-당신은 열정 넘치는 쿠키 탐정!
-이 맛있는 비밀을 찾아낼 수 있을까요?
-
-Description에 쿠키라는 말이 반복되는 것을 보니 &quot;Cookie/Session&quot;과 관련있는 문제인가 보다.
-링크되어 있는 here를 클릭해 문제에 접속해주자.
-
-접속하면 로그인 페이지가 뜨는데, CTF 로그인 국룰인 guest/guest 로 로그인을 시도해봤다.
-
-권한이 없다고 한다. (당연함.)
-그리고 출력된 내용은 다음과 같다.
-12345쿠키 몬스터가 말하길:“비밀번호 따윈 필요 없어. 쿠키만 있으면 돼!”힌트:“최근에 쿠키(cookie) 확인해봤어?”
-바로 개발자 도구에 들어가 쿠키를 확인해봤다.
-(단축키 : F...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-Includes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Includes/">(Easy) Includes</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.5k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/includes/" rel="tag">includes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : Incldues
-
-
-
-[Description]
-플래그를 얻을 수 있겠나요?
-
-Description 에서 뭔가 힌트 얻을게 없어보여서 바로 문제에 접속해보았다.
-접속해보니
-
-이런 페이지가 나오는데, 해석해보면
-
-인클루드(Include)에 대하여
-많은 프로그래밍 언어나 기타 컴퓨터 파일에는 include(때로는 copy 또는 import)라고 불리는 지시문이 있습니다.
-이 지시문은 두 번째 파일의 내용을 원래 파일에 삽입하도록 합니다.
-이렇게 포함되는 파일을 copybook 또는 헤더 파일(header file)이라고 부릅니다.
-주로 프로그램 데이터의 물리적 레이아웃, 절차적 코드의 일부, 또는 선행 선언(forward declaration)을 정의하는 데 사용되며,
-캡슐화(encapsulation)와 코드 재사용을 촉진합니다.
-출처: 위키백과 “Include directiv...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-Includes/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
 <article id="post-2025-08-11-picoCTF-Cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -775,6 +587,100 @@ Title : Cookies
     <a class="right-panel  non-pic  "
       
       href="/2025/08/11/2025-08-11-picoCTF-Cookies/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/">(Easy) Cookie Monster Secret Recipe</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            791 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie-monster-secret-recipe/" rel="tag">cookie monster secret recipe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : Cookie Monster Secret Recipe
+
+
+
+[Description]
+쿠키 몬스터가 자신의 최고 비밀 쿠키 레시피를 웹사이트 어딘가에 숨겨두었어요.
+당신은 열정 넘치는 쿠키 탐정!
+이 맛있는 비밀을 찾아낼 수 있을까요?
+
+Description에 쿠키라는 말이 반복되는 것을 보니 &quot;Cookie/Session&quot;과 관련있는 문제인가 보다.
+링크되어 있는 here를 클릭해 문제에 접속해주자.
+
+접속하면 로그인 페이지가 뜨는데, CTF 로그인 국룰인 guest/guest 로 로그인을 시도해봤다.
+
+권한이 없다고 한다. (당연함.)
+그리고 출력된 내용은 다음과 같다.
+12345쿠키 몬스터가 말하길:“비밀번호 따윈 필요 없어. 쿠키만 있으면 돼!”힌트:“최근에 쿠키(cookie) 확인해봤어?”
+바로 개발자 도구에 들어가 쿠키를 확인해봤다.
+(단축키 : F...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -996,6 +902,100 @@ HOME, ABOUT, CONTACT
    
 
 
+<article id="post-2025-08-11-picoCTF-Includes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Includes/">(Easy) Includes</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.5k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/includes/" rel="tag">includes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : Incldues
+
+
+
+[Description]
+플래그를 얻을 수 있겠나요?
+
+Description 에서 뭔가 힌트 얻을게 없어보여서 바로 문제에 접속해보았다.
+접속해보니
+
+이런 페이지가 나오는데, 해석해보면
+
+인클루드(Include)에 대하여
+많은 프로그래밍 언어나 기타 컴퓨터 파일에는 include(때로는 copy 또는 import)라고 불리는 지시문이 있습니다.
+이 지시문은 두 번째 파일의 내용을 원래 파일에 삽입하도록 합니다.
+이렇게 포함되는 파일을 copybook 또는 헤더 파일(header file)이라고 부릅니다.
+주로 프로그램 데이터의 물리적 레이아웃, 절차적 코드의 일부, 또는 선행 선언(forward declaration)을 정의하는 데 사용되며,
+캡슐화(encapsulation)와 코드 재사용을 촉진합니다.
+출처: 위키백과 “Include directiv...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-Includes/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-08-11-picoCTF-logon" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -1096,6 +1096,96 @@ Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아
    
 
 
+<article id="post-2025-08-11-picoCTF-n0s4n1ty-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/">(Easy) n0s4n1ty 1</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.8k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n0s4n1ty-1/" rel="tag">n0s4n1ty 1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : n0s4n1ty 1
+
+
+
+[Description]
+한 개발자가 웹사이트에 프로필 사진 업로드 기능을 추가했지만, 이 구현에는 결함이 있습니다. 이로 인해 당신에게 기회가 생겼습니다.
+당신의 임무는 (수락한다면) 제공된 웹 페이지에 접속해 파일 업로드 영역을 찾아내는 것입니다. 궁극적인 목표는 /root 디렉터리에 숨겨진 플래그를 찾는 것입니다.
+
+일단 Description 만 읽었을 때는 &quot;파일 업로드&quot;라는 단어가 자꾸 걸린다…
+(파일 업로드 취약점이 먹힐 것 같은 느낌…)
+우선 우측 상단에 Launch Instance를 클릭해서 문제 접속을 위한 인스턴스를 생성하고,
+생성한 링크에 접속해보자.
+
+링크에 접속하면 사진과 같은 화면을 볼 수 있는데,
+파일 선택을 통해 업로드할 파일을 지정하고, Upload Profile 버튼을 누르면 해당 파일이 서버에 업...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-08-11-picoCTF-where-are-the-robots" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -1173,96 +1263,6 @@ robots.txt 파일이란, 웹사이트의 루트 디렉토리에 위치하는 텍
     <a class="right-panel  non-pic  "
       
       href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-n0s4n1ty-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/">(Easy) n0s4n1ty 1</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.8k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n0s4n1ty-1/" rel="tag">n0s4n1ty 1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : n0s4n1ty 1
-
-
-
-[Description]
-한 개발자가 웹사이트에 프로필 사진 업로드 기능을 추가했지만, 이 구현에는 결함이 있습니다. 이로 인해 당신에게 기회가 생겼습니다.
-당신의 임무는 (수락한다면) 제공된 웹 페이지에 접속해 파일 업로드 영역을 찾아내는 것입니다. 궁극적인 목표는 /root 디렉터리에 숨겨진 플래그를 찾는 것입니다.
-
-일단 Description 만 읽었을 때는 &quot;파일 업로드&quot;라는 단어가 자꾸 걸린다…
-(파일 업로드 취약점이 먹힐 것 같은 느낌…)
-우선 우측 상단에 Launch Instance를 클릭해서 문제 접속을 위한 인스턴스를 생성하고,
-생성한 링크에 접속해보자.
-
-링크에 접속하면 사진과 같은 화면을 볼 수 있는데,
-파일 선택을 통해 업로드할 파일을 지정하고, Upload Profile 버튼을 누르면 해당 파일이 서버에 업...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
