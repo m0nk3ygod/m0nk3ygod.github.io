@@ -51,7 +51,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1755073830861;
+    window.__BUILD_ID__ = 1755073986104;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -204,6 +204,16 @@
                 <div class="category-count">11</div>
             </a>
         </div></div>
+            <a class="category-link" href="/categories/Tech/">
+                Tech
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
+            </a>
+        </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
                 Dreamhack
                 <div class="category-count">4</div>
@@ -216,16 +226,6 @@
         
             <a class="category-link" href="/categories/Dreamhack/Basic/">
                 Basic
-                <div class="category-count">1</div>
-            </a>
-        </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
                 <div class="category-count">1</div>
             </a>
         </div></div>
@@ -276,6 +276,12 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
+          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
+            <div class="recent-link-text">
+              Bandit 10
+            </div>
+          </a>
+        
           <a class="recent-link" href="/2025/08/13/2025-08-13-Computer-Architecture/" title="🔒 Computer Architecture (Dreamhack)" >
             <div class="recent-link-text">
               🔒 Computer Architecture (Dreamhack)
@@ -288,21 +294,15 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
+          <a class="recent-link" href="/2025/08/12/2025-08-12-Bandit-9/" title="Bandit 9" >
             <div class="recent-link-text">
-              Bandit 10
+              Bandit 9
             </div>
           </a>
         
           <a class="recent-link" href="/2025/08/12/2025-08-12-Natas-9/" title="Natas 9" >
             <div class="recent-link-text">
               Natas 9
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/12/2025-08-12-Bandit-9/" title="Bandit 9" >
-            <div class="recent-link-text">
-              Bandit 9
             </div>
           </a>
         
@@ -316,6 +316,100 @@
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-2025-08-13-Bandit-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/13/2025-08-13-Bandit-10/">Bandit 10</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-12T15:00:00.000Z" itemprop="datePublished">2025-08-13</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.3k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/base64/" rel="tag">base64</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/decoding/" rel="tag">decoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding/" rel="tag">encoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Bandit 10 / write-up
+
+bandit 10 레벨 접속 패스워드 : FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+이번 문제도 접속해서 플래그를 찾아보자.
+접속해서 뭐가 있나 확인해보니…
+
+data.txt 파일이 보인다.
+한 번 읽어보면?
+
+어떤 문자열이 보인다.
+근데 기존에 봐왔던 익숙한 모습의 패스워드는 아니다…
+
+해당 문자열을 잘보면 맨 뒤에 == 붙는 것을 볼 수 있다
+
+Base64
+Base64는 바이너리 데이터를 문자로 안전하게 표현하기 위한 인코딩 방식이다.
+주로 이미지, 파일, 암호화된 데이터 등을 텍스트 환경(이메일, JSON, URL 등)에서 전송하기 위해 사용된다.
+동작 원리
+Base64는 데이터를 3byte(24bit) 단위로 잘라, 이를 6bit씩 4그룹으로 나누어 각각을 ASCII 문자로 변환한다.
+이때 사용되는 문자는 총 64개로 다음과 같다.
+123ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/13/2025-08-13-Bandit-10/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
    
 
 
@@ -482,7 +576,7 @@ Natas9 레벨에서 동작한 것과 같이 사용자가 입력한 문자열이 
    
 
 
-<article id="post-2025-08-13-Bandit-10" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-08-12-Bandit-9" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -493,7 +587,7 @@ Natas9 레벨에서 동작한 것과 같이 사용자가 입력한 문자열이 
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/13/2025-08-13-Bandit-10/">Bandit 10</a>
+        <a class="p-name article-title" href="/2025/08/12/2025-08-12-Bandit-9/">Bandit 9</a>
       </h1>
     
   
@@ -501,7 +595,7 @@ Natas9 레벨에서 동작한 것과 같이 사용자가 입력한 문자열이 
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-12T15:00:00.000Z" itemprop="datePublished">2025-08-13</time>
+  <time class="dt-published" datetime="2025-08-11T15:00:00.000Z" itemprop="datePublished">2025-08-12</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -512,39 +606,41 @@ Natas9 레벨에서 동작한 것과 같이 사용자가 입력한 문자열이 
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.3k words 
+            1.4k words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/base64/" rel="tag">base64</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/decoding/" rel="tag">decoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding/" rel="tag">encoding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/" rel="tag">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/piping/" rel="tag">piping</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redirection/" rel="tag">redirection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/strings/" rel="tag">strings</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Bandit 10 / write-up
+              Bandit 9 / write-up
 
-bandit 10 레벨 접속 패스워드 : FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+bandit 9 레벨 접속 패스워드 : 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
 이번 문제도 접속해서 플래그를 찾아보자.
 접속해서 뭐가 있나 확인해보니…
 
-data.txt 파일이 보인다.
-한 번 읽어보면?
+바로 읽어봤는데
 
-어떤 문자열이 보인다.
-근데 기존에 봐왔던 익숙한 모습의 패스워드는 아니다…
+어…
+이건 진짜 못알아보겠다…
+문제 설명을 읽어보자.
 
-해당 문자열을 잘보면 맨 뒤에 == 붙는 것을 볼 수 있다
 
-Base64
-Base64는 바이너리 데이터를 문자로 안전하게 표현하기 위한 인코딩 방식이다.
-주로 이미지, 파일, 암호화된 데이터 등을 텍스트 환경(이메일, JSON, URL 등)에서 전송하기 위해 사용된다.
-동작 원리
-Base64는 데이터를 3byte(24bit) 단위로 잘라, 이를 6bit씩 4그룹으로 나누어 각각을 ASCII 문자로 변환한다.
-이때 사용되는 문자는 총 64개로 다음과 같다.
-123ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq...
+다음 레벨의 비밀번호는 data.txt 파일 안에 있으며, 몇 안 되는 사람이 읽을 수 있는 문자열 중 하나에 저장되어 있습니다.
+이 문자열은 여러 개의 ‘=` 문자 바로 뒤에 위치합니다.
+
+data.txt 파일 안에 비밀번호가 들어있고,
+몇 안 되는 사람이 읽을 수 있는 문자열 중 하나에 저장되어 있다고 한다.
+또 하나의 힌트는 여러 개의 ‘=’ 문자 바로 뒤에 위치한다고 한다.
+
+일반적으로 바이너리 파일이나 텍스트 + 바이너리 섞인 파일을 열면 사람이 읽을 수 없는 이진 데이터가 대부분이다.
+(data.txt를 읽어보면 알 수 있음… 못 읽어…)
+그런데 문제에서 &quot;사람이 읽을 수 있...
             
           </div>
         
@@ -556,7 +652,7 @@ Base64는 데이터를 3byte(24bit) 단위로 잘라, 이를 6bit씩 4그룹으�
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/08/13/2025-08-13-Bandit-10/" 
+      href="/2025/08/12/2025-08-12-Bandit-9/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -671,7 +767,7 @@ banana라고 입력하니 사진과 같이 나온다.
    
 
 
-<article id="post-2025-08-12-Bandit-9" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -682,7 +778,7 @@ banana라고 입력하니 사진과 같이 나온다.
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/12/2025-08-12-Bandit-9/">Bandit 9</a>
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/">(Easy) Cookie Monster Secret Recipe</a>
       </h1>
     
   
@@ -690,52 +786,50 @@ banana라고 입력하니 사진과 같이 나온다.
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-11T15:00:00.000Z" itemprop="datePublished">2025-08-12</time>
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.4k words 
+            795 words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/" rel="tag">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/piping/" rel="tag">piping</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redirection/" rel="tag">redirection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/strings/" rel="tag">strings</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie-monster-secret-recipe/" rel="tag">cookie monster secret recipe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Bandit 9 / write-up
+              picoCTF / Web Exploitation
 
-bandit 9 레벨 접속 패스워드 : 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
-
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
-
-바로 읽어봤는데
-
-어…
-이건 진짜 못알아보겠다…
-문제 설명을 읽어보자.
+Difficulty Level : Easy
+Title : Cookie Monster Secret Recipe
 
 
-다음 레벨의 비밀번호는 data.txt 파일 안에 있으며, 몇 안 되는 사람이 읽을 수 있는 문자열 중 하나에 저장되어 있습니다.
-이 문자열은 여러 개의 ‘=` 문자 바로 뒤에 위치합니다.
 
-data.txt 파일 안에 비밀번호가 들어있고,
-몇 안 되는 사람이 읽을 수 있는 문자열 중 하나에 저장되어 있다고 한다.
-또 하나의 힌트는 여러 개의 ‘=’ 문자 바로 뒤에 위치한다고 한다.
+[Description]
+쿠키 몬스터가 자신의 최고 비밀 쿠키 레시피를 웹사이트 어딘가에 숨겨두었어요.
+당신은 열정 넘치는 쿠키 탐정!
+이 맛있는 비밀을 찾아낼 수 있을까요?
 
-일반적으로 바이너리 파일이나 텍스트 + 바이너리 섞인 파일을 열면 사람이 읽을 수 없는 이진 데이터가 대부분이다.
-(data.txt를 읽어보면 알 수 있음… 못 읽어…)
-그런데 문제에서 &quot;사람이 읽을 수 있...
+Description에 쿠키라는 말이 반복되는 것을 보니 &quot;Cookie/Session&quot;과 관련있는 문제인가 보다.
+링크되어 있는 here를 클릭해 문제에 접속해주자.
+
+접속하면 로그인 페이지가 뜨는데, CTF 로그인 국룰인 guest/guest 로 로그인을 시도해봤다.
+
+권한이 없다고 한다. (당연함.)
+그리고 출력된 내용은 다음과 같다.
+12345쿠키 몬스터가 말하길:  “비밀번호 따윈 필요 없어. 쿠키만 있으면 돼!”힌트:  “최근에 쿠키(cookie) 확인해봤어?”
+바로 개발자 도구에 들어가 쿠키를 확인해봤다.
+(단축키...
             
           </div>
         
@@ -747,7 +841,108 @@ data.txt 파일 안에 비밀번호가 들어있고,
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/08/12/2025-08-12-Bandit-9/" 
+      href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-Cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookies/">(Easy) Cookies</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.9k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : Cookies
+
+
+
+[Description]
+누가 쿠키를 안 좋아하겠어요?
+가장 맛있는(?) 쿠키를 찾아보세요
+
+보아하니 먹는 쿠키는 아닌거 같고,
+웹 브라우저의 HTTP 쿠키를 의미하는 것 같다.
+우선 문제에 접속해봤다.
+
+뭔가 입력 받을 수 있는 입력폼과,
+폼 전송 역할을 할 것 같은 Search 버튼도 보인다.
+입력폼에 “snickerdoodle” 이라는 단어가 보여서
+똑같이 입력해봤더니
+
+
+그건 쿠키에요! 하지만 별로 특별하진 않네요…
+
+해당 문구와 함께 “I love snickerdoodle cookies!” 라는 문장을 보여준다.
+아무래도 특별한 쿠키를 찾으면 되는 것 같다.
+
+쿠키 문제인 것 같으니 개발자 도구를 열어 쿠키가 설정되어있는지, 어떻게 설정되어 있는지 확인해 봤다.  
+(개발자 도구 단축키는 F12 or 페이지 빈 곳 우클릭 - 검사)
+개발자 도구...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-Cookies/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -846,100 +1041,6 @@ Elements 탭에서 HTML 구조를 확인하고 있었는데…
     <a class="right-panel  non-pic  "
       
       href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/">(Easy) Cookie Monster Secret Recipe</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            795 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookie-monster-secret-recipe/" rel="tag">cookie monster secret recipe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : Cookie Monster Secret Recipe
-
-
-
-[Description]
-쿠키 몬스터가 자신의 최고 비밀 쿠키 레시피를 웹사이트 어딘가에 숨겨두었어요.
-당신은 열정 넘치는 쿠키 탐정!
-이 맛있는 비밀을 찾아낼 수 있을까요?
-
-Description에 쿠키라는 말이 반복되는 것을 보니 &quot;Cookie/Session&quot;과 관련있는 문제인가 보다.
-링크되어 있는 here를 클릭해 문제에 접속해주자.
-
-접속하면 로그인 페이지가 뜨는데, CTF 로그인 국룰인 guest/guest 로 로그인을 시도해봤다.
-
-권한이 없다고 한다. (당연함.)
-그리고 출력된 내용은 다음과 같다.
-12345쿠키 몬스터가 말하길:  “비밀번호 따윈 필요 없어. 쿠키만 있으면 돼!”힌트:  “최근에 쿠키(cookie) 확인해봤어?”
-바로 개발자 도구에 들어가 쿠키를 확인해봤다.
-(단축키...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -1064,7 +1165,7 @@ HOME, ABOUT, CONTACT
    
 
 
-<article id="post-2025-08-11-picoCTF-Cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-08-11-picoCTF-Includes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -1075,7 +1176,7 @@ HOME, ABOUT, CONTACT
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookies/">(Easy) Cookies</a>
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Includes/">(Easy) Includes</a>
       </h1>
     
   
@@ -1094,11 +1195,11 @@ HOME, ABOUT, CONTACT
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.9k words 
+            1.5k words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/includes/" rel="tag">includes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
@@ -1108,32 +1209,25 @@ HOME, ABOUT, CONTACT
               picoCTF / Web Exploitation
 
 Difficulty Level : Easy
-Title : Cookies
+Title : Incldues
 
 
 
 [Description]
-누가 쿠키를 안 좋아하겠어요?
-가장 맛있는(?) 쿠키를 찾아보세요
+플래그를 얻을 수 있겠나요?
 
-보아하니 먹는 쿠키는 아닌거 같고,
-웹 브라우저의 HTTP 쿠키를 의미하는 것 같다.
-우선 문제에 접속해봤다.
+Description 에서 뭔가 힌트 얻을게 없어보여서 바로 문제에 접속해보았다.
+접속해보니
 
-뭔가 입력 받을 수 있는 입력폼과,
-폼 전송 역할을 할 것 같은 Search 버튼도 보인다.
-입력폼에 “snickerdoodle” 이라는 단어가 보여서
-똑같이 입력해봤더니
+이런 페이지가 나오는데, 해석해보면
 
-
-그건 쿠키에요! 하지만 별로 특별하진 않네요…
-
-해당 문구와 함께 “I love snickerdoodle cookies!” 라는 문장을 보여준다.
-아무래도 특별한 쿠키를 찾으면 되는 것 같다.
-
-쿠키 문제인 것 같으니 개발자 도구를 열어 쿠키가 설정되어있는지, 어떻게 설정되어 있는지 확인해 봤다.  
-(개발자 도구 단축키는 F12 or 페이지 빈 곳 우클릭 - 검사)
-개발자 도구...
+인클루드(Include)에 대하여
+많은 프로그래밍 언어나 기타 컴퓨터 파일에는 include(때로는 copy 또는 import)라고 불리는 지시문이 있습니다.
+이 지시문은 두 번째 파일의 내용을 원래 파일에 삽입하도록 합니다.
+이렇게 포함되는 파일을 copybook 또는 헤더 파일(header file)이라고 부릅니다.
+주로 프로그램 데이터의 물리적 레이아웃, 절차적 코드의 일부, 또는 선행 선언(forward declaration)을 정의하는 데 사용되며,
+캡슐화(encapsulation)와 코드 재사용을 촉진합니다.
+출처: 위키백과 “Include directiv...
             
           </div>
         
@@ -1145,105 +1239,7 @@ Title : Cookies
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/08/11/2025-08-11-picoCTF-Cookies/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-logon" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-logon/">(Easy) logon</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            764 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/logon/" rel="tag">logon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : logon
-
-
-
-[Description]
-공장은 모든 사용자에게 무언가를 숨기고 있어요.
-Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아낼 수 있을까요?
-
-음… Description 만 봤을 때는 무슨 말인지 모르겠다…
-일단 한 번 접속해보자.
-
-유저명과 비밀번호를 입력할 수 있는 폼이 존재하고, Sign in 버튼을 통해 제출할 수 있는 것으로 보인다.
-우측 상단에는 Home과 Sign Out 링크도 보인다.
-
-일단 &quot;Joe&quot;에 이름으로 로그인하라고 했으니 로그인 해보았다.
-비밀번호는 모르겠어서 그냥 joe라고 입력했는데…
-
-(Username : joe | Password : joe)
-
-성공: 로그인했어요! 하지만 플래그를 볼 수 있을지는 잘 모르겠네요.
-
-로그인에 성공했다…!
-근데 플래그는 볼 수 없다고 한다… (아마도 권한이 없는 듯 ...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-logon/" 
+      href="/2025/08/11/2025-08-11-picoCTF-Includes/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
