@@ -48,10 +48,10 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
-  <script>
+  <!-- <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1754982949873;
+    window.__BUILD_ID__ = 1755073213247;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -77,7 +77,7 @@
       });
     }
   })();
-  </script>
+  </script> -->
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -191,27 +191,32 @@
       <div class="category-box">
             <a class="category-link" href="/categories/Overthewire/">
                 Overthewire
-                <div class="category-count">20</div>
+                <div class="category-count">22</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
-                <div class="category-count">10</div>
-            </a>
-        
             <a class="category-link" href="/categories/Overthewire/Bandit/">
                 Bandit
-                <div class="category-count">10</div>
+                <div class="category-count">11</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
+                <div class="category-count">11</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
                 Dreamhack
-                <div class="category-count">3</div>
+                <div class="category-count">4</div>
             </a>
         <div class="children"><div class="category-box">
             <a class="category-link" href="/categories/Dreamhack/Wargame/">
                 Wargame
                 <div class="category-count">3</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Dreamhack/Basic/">
+                Basic
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Tech/">
@@ -252,7 +257,7 @@
       
         <a class="archive-link" href="/archives/2025/08 ">
           August 2025 
-          <div class="archive-count">18 </div>
+          <div class="archive-count">21 </div>
         </a>
       
         <a class="archive-link" href="/archives/2025/07 ">
@@ -271,6 +276,18 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
+          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
+            <div class="recent-link-text">
+              Bandit 10
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/13/2025-08-13-Natas-10/" title="Natas 10" >
+            <div class="recent-link-text">
+              Natas 10
+            </div>
+          </a>
+        
           <a class="recent-link" href="/2025/08/12/2025-08-12-Bandit-9/" title="Bandit 9" >
             <div class="recent-link-text">
               Bandit 9
@@ -280,18 +297,6 @@
           <a class="recent-link" href="/2025/08/12/2025-08-12-Natas-9/" title="Natas 9" >
             <div class="recent-link-text">
               Natas 9
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-Cookie-Monster-Secret-Recipe/" title="(Easy) Cookie Monster Secret Recipe" >
-            <div class="recent-link-text">
-              (Easy) Cookie Monster Secret Recipe
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/11/2025-08-11-picoCTF-WebDecode/" title="(Easy) WebDecode" >
-            <div class="recent-link-text">
-              (Easy) WebDecode
             </div>
           </a>
         
@@ -311,6 +316,261 @@
     </div>
     <div id="content-body">
       
+   
+
+
+<article id="post-2025-08-11-picoCTF-n0s4n1ty-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/">(Easy) n0s4n1ty 1</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1.8k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n0s4n1ty-1/" rel="tag">n0s4n1ty 1</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : n0s4n1ty 1
+
+
+
+[Description]
+한 개발자가 웹사이트에 프로필 사진 업로드 기능을 추가했지만, 이 구현에는 결함이 있습니다. 이로 인해 당신에게 기회가 생겼습니다.
+당신의 임무는 (수락한다면) 제공된 웹 페이지에 접속해 파일 업로드 영역을 찾아내는 것입니다. 궁극적인 목표는 /root 디렉터리에 숨겨진 플래그를 찾는 것입니다.
+
+일단 Description 만 읽었을 때는 &quot;파일 업로드&quot;라는 단어가 자꾸 걸린다…
+(파일 업로드 취약점이 먹힐 것 같은 느낌…)
+우선 우측 상단에 Launch Instance를 클릭해서 문제 접속을 위한 인스턴스를 생성하고,
+생성한 링크에 접속해보자.
+
+링크에 접속하면 사진과 같은 화면을 볼 수 있는데,
+파일 선택을 통해 업로드할 파일을 지정하고, Upload Profile 버튼을 누르면 해당 파일이 서버에 업...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-n0s4n1ty-1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-where-are-the-robots" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/">(Easy) where are the robots</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">picoCTF</a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            825 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/where-are-the-robots/" rel="tag">where are the robots</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : where are the robots
+
+
+
+[Description]
+당신은 로봇들을 찾을 수 있나요?
+
+Description을 보면 로봇이라는 말이 나온다.
+로봇을 언급하는거보니 robots.txt 를 이용해야함을 어느정도 유추해 볼 수 있다.
+robots.txt
+robots.txt 파일이란, 웹사이트의 루트 디렉토리에 위치하는 텍스트 파일로,
+검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고,
+어떤 페이지는 수집하지 말아야 하는지 지시하는 역할을 한다.
+자세한 내용은 공식 문서 참고
+(https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko)
+
+우선 문제에 접속해봤다.
+
+ㄷㄷㄷ 무섭다…
+로봇이 어디있냐고 물어보고 있다.
+주...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-14-Computer-Architecture" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/10/2025-08-14-Computer-Architecture/">🔒 Computer Architecture (Dreamhack)</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-09T15:00:00.000Z" itemprop="datePublished">2025-08-10</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Dreamhack/">Dreamhack</a>><a class="meta-cate-link" href="/categories/Dreamhack/Basic/">Basic</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            7.4k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/computer-architecture/" rel="tag">computer architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dreamhack/" rel="tag">dreamhack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flag/" rel="tag">flag</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/isa/" rel="tag">isa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pointer/" rel="tag">pointer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/register/" rel="tag">register</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/segment/" rel="tag">segment</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          이 글은 보호되어있습니다.
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/10/2025-08-14-Computer-Architecture/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
    
 
 
@@ -943,278 +1203,6 @@ group ‘user name’ : 사용자가 속해 있는 그룹을 알려준다.
     <a class="right-panel  non-pic  "
       
       href="/2025/08/04/2025-08-04-Linux-Command/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-01-Dreamhack-Wargame-Beginner-Path-Finder" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/01/2025-08-01-Dreamhack-Wargame-Beginner-Path-Finder/">🔒 (B) Path Finder</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-31T15:00:00.000Z" itemprop="datePublished">2025-08-01</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Dreamhack/">Dreamhack</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/">Wargame</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.3k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/" rel="tag">c</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dreamhack/" rel="tag">dreamhack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/path/" rel="tag">path</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system-hacking/" rel="tag">system hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wargame/" rel="tag">wargame</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          해당글은 비밀글 입니다.
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/01/2025-08-01-Dreamhack-Wargame-Beginner-Path-Finder/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-07-31-Natas-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/31/2025-07-31-Natas-6/">Natas 6</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-30T15:00:00.000Z" itemprop="datePublished">2025-07-31</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.7k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic-php/" rel="tag">basic php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Natas 6 / write-up
-
-접속 정보
-
-URL : http://natas6.natas.labs.overthewire.org
-사용자 이름 : natas6
-비밀번호 : 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
-
-
-접속하면,
-
-뭔가 입력받을 수 있는 폼과 제출 버튼이 존재하고, View sourcecode라는 링크가 있다.
-우선 아무거나 입력해서 제출해보자.(1234 입력해봤음)
-
-“Wrong secret”
-틀렸다고 하는거 보니 원하는 값이 아닌가보다…
-View sourcecode 링크를 클릭해서 해당 페이지가 어떻게 동작하는지 확인해보자.
-
-소스 코드가 나오는데,
-우리가 아는 기본 html 태그 형식이 아니라 &lt;? ?&gt; 라고 되어있는 부분을 볼 수 있다.
-해당 태그는 PHP 코드 블록을 여닫는 태그이다!
-
-PHP (Hypertext Preprocessor)
-php는 웹 서버에서 실행되는 프로그래밍 언어로, 동적인 웹페이지를 만들기 위해 사용한다...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/31/2025-07-31-Natas-6/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-07-31-Bandit-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/31/2025-07-31-Bandit-6/">Bandit 6</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-30T15:00:00.000Z" itemprop="datePublished">2025-07-31</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            2.3k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/find-command/" rel="tag">find command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Bandit 6 / write-up
-
-bandit 6 레벨 접속 패스워드 : HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
-
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
-
-!!! 뭐가 없다?!
-문제를 읽어보자…
-
-문제를 읽어보니 또 파일 특징이 나와 있다…
-find를 써야할 것 같고, 특징은 다음과 같다.
-
-파일 소유자는 bandit7 이고
-파일 그룹은 bandit6 이며
-크기는 33바이트이다.
-
-
-find 옵션을 알아보자면
-
-find 명령어 옵션 정리표
-
-  
-    
-      분류
-      옵션
-      설명
-      예시
-    
-  
-  
-    기본 검색.현재 디렉토리에서 검색find .
-    이름 검색-name이름이 일치하는 파일 검색find . -name "*.txt"
-    이름 검색(대소문자 무시)-iname대소문자 구분 없이 이름 검색find . -iname "README.md"
-    유형 지정-type파일 ...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/31/2025-07-31-Bandit-6/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
