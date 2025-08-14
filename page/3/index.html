@@ -51,7 +51,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1755144232411;
+    window.__BUILD_ID__ = 1755145231921;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -190,32 +190,22 @@
       <h3 class="widget-title">Categories</h3>
       <div class="category-box">
             <a class="category-link" href="/categories/Overthewire/">
-                Overthewire
+                < Overthewire >
                 <div class="category-count">22</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
-                <div class="category-count">11</div>
-            </a>
-        
             <a class="category-link" href="/categories/Overthewire/Bandit/">
                 Bandit
                 <div class="category-count">11</div>
             </a>
-        </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
+        
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
+                <div class="category-count">11</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
-                Dreamhack
+                < Dreamhack >
                 <div class="category-count">5</div>
             </a>
         <div class="children"><div class="category-box">
@@ -224,14 +214,14 @@
                 <div class="category-count">3</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Wargame/System/">
-                System
+            <a class="category-link" href="/categories/Dreamhack/Wargame/Pwnable/">
+                - Pwnable
                 <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/Dreamhack/Wargame/Web/">
-                Web
-                <div class="category-count">1</div>
+                - Web
+                <div class="category-count">2</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/Study/">
@@ -239,18 +229,28 @@
                 <div class="category-count">2</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Study/Pwnable/">
-                Pwnable
+            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
+                - Basic
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
-                Basic
+            <a class="category-link" href="/categories/Dreamhack/Study/Tools/">
+                - Tools
                 <div class="category-count">1</div>
             </a>
         </div></div></div></div>
+            <a class="category-link" href="/categories/Tech/">
+                < Tech >
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
+            </a>
+        </div></div>
             <a class="category-link" href="/categories/picoCTF/">
-                picoCTF
+                < picoCTF >
                 <div class="category-count">8</div>
             </a>
         <div class="children"><div class="category-box">
@@ -260,10 +260,15 @@
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
-                settings
+                < settings >
                 <div class="category-count">1</div>
             </a>
-        </div>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/settings/Hexo/">
+                Hexo
+                <div class="category-count">1</div>
+            </a>
+        </div></div></div>
     </div>
   </div>
 
@@ -296,12 +301,6 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
-            <div class="recent-link-text">
-              Bandit 10
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/13/2025-08-13-GDB/" title="🔒 GDB (Dreamhack)" >
             <div class="recent-link-text">
               🔒 GDB (Dreamhack)
@@ -311,6 +310,12 @@
           <a class="recent-link" href="/2025/08/13/2025-08-13-Computer-Architecture/" title="🔒 Computer Architecture (Dreamhack)" >
             <div class="recent-link-text">
               🔒 Computer Architecture (Dreamhack)
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
+            <div class="recent-link-text">
+              Bandit 10
             </div>
           </a>
         
@@ -363,7 +368,7 @@
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Tech/">Tech</a>><a class="meta-cate-link" href="/categories/Tech/Linux/">Linux</a>
+  <a class="meta-cate-link" href="/categories/Tech/">< Tech ></a>><a class="meta-cate-link" href="/categories/Tech/Linux/">Linux</a>
    
 </div>
   
@@ -479,7 +484,7 @@ group ‘user name’ : 사용자가 속해 있는 그룹을 알려준다.
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Dreamhack/">Dreamhack</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/">Wargame</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/System/">System</a>
+  <a class="meta-cate-link" href="/categories/Dreamhack/">< Dreamhack ></a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/">Wargame</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/Pwnable/">- Pwnable</a>
    
 </div>
   
@@ -524,102 +529,6 @@ group ‘user name’ : 사용자가 속해 있는 그룹을 알려준다.
    
 
 
-<article id="post-2025-07-31-Natas-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/31/2025-07-31-Natas-6/">Natas 6</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-30T15:00:00.000Z" itemprop="datePublished">2025-07-31</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.7k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic-php/" rel="tag">basic php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Natas 6 / write-up
-
-접속 정보
-
-URL : http://natas6.natas.labs.overthewire.org
-사용자 이름 : natas6
-비밀번호 : 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
-
-
-접속하면,
-
-뭔가 입력받을 수 있는 폼과 제출 버튼이 존재하고, View sourcecode라는 링크가 있다.
-우선 아무거나 입력해서 제출해보자.(1234 입력해봤음)
-
-“Wrong secret”
-틀렸다고 하는거 보니 원하는 값이 아닌가보다…
-View sourcecode 링크를 클릭해서 해당 페이지가 어떻게 동작하는지 확인해보자.
-
-소스 코드가 나오는데,
-우리가 아는 기본 html 태그 형식이 아니라 &lt;? ?&gt; 라고 되어있는 부분을 볼 수 있다.
-해당 태그는 PHP 코드 블록을 여닫는 태그이다!
-
-PHP (Hypertext Preprocessor)
-php는 웹 서버에서 실행되는 프로그래밍 언어로, 동적인 웹페이지를 만들기 위해 사용한다...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/31/2025-07-31-Natas-6/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
 <article id="post-2025-07-31-Bandit-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -644,7 +553,7 @@ php는 웹 서버에서 실행되는 프로그래밍 언어로, 동적인 웹페
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
    
 </div>
   
@@ -727,7 +636,7 @@ find 명령어 옵션 정리표
    
 
 
-<article id="post-2025-07-30-Natas-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-07-31-Natas-6" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -738,7 +647,7 @@ find 명령어 옵션 정리표
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/30/2025-07-30-Natas-5/">Natas 5</a>
+        <a class="p-name article-title" href="/2025/07/31/2025-07-31-Natas-6/">Natas 6</a>
       </h1>
     
   
@@ -746,55 +655,52 @@ find 명령어 옵션 정리표
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-29T15:00:00.000Z" itemprop="datePublished">2025-07-30</time>
+  <time class="dt-published" datetime="2025-07-30T15:00:00.000Z" itemprop="datePublished">2025-07-31</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1k words 
+            1.7k words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic-php/" rel="tag">basic php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Natas 5 / write-up
+              Natas 6 / write-up
 
 접속 정보
 
-URL : http://natas5.natas.labs.overthewire.org
-사용자 이름 : natas5
-비밀번호 : 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+URL : http://natas6.natas.labs.overthewire.org
+사용자 이름 : natas6
+비밀번호 : 0RoJwHdSKWFTYR5WuiAewauSuNaBXned
 
 
 접속하면,
 
+뭔가 입력받을 수 있는 폼과 제출 버튼이 존재하고, View sourcecode라는 링크가 있다.
+우선 아무거나 입력해서 제출해보자.(1234 입력해봤음)
 
-Access disallowed. You are not logged in
+“Wrong secret”
+틀렸다고 하는거 보니 원하는 값이 아닌가보다…
+View sourcecode 링크를 클릭해서 해당 페이지가 어떻게 동작하는지 확인해보자.
 
-접근이 허용되지 않았다고 한다. 로그인도 안되어 있다고 한다…
-근데 로그인이라는 말이 있는 것으로 보니, 쿠키 기반 로그인을 하고 있지 않을까 예상해볼 수 있다.
+소스 코드가 나오는데,
+우리가 아는 기본 html 태그 형식이 아니라 &lt;? ?&gt; 라고 되어있는 부분을 볼 수 있다.
+해당 태그는 PHP 코드 블록을 여닫는 태그이다!
 
-Coookie
-로그인이라는 행위는 나를 증명하는 행위이다.
-그리고 서버는 증명이 맞는지 확인 즉, 인증해줘야한다.
-그럴려면 사용자를 기억해야하는데, 웹이라는 녀석은 stateless 라는 특성을 가지고 있다.
-
-그 특성이 무엇이냐…
-
-바로 상태를 기억하지 못한다는 것이다!
-HTTP는 Stateless한 프로토콜이라 기본적으로 요청(Request)과 응답(Response)만 하고 끝나버린다.
-서버는...
+PHP (Hypertext Preprocessor)
+php는 웹 서버에서 실행되는 프로그래밍 언어로, 동적인 웹페이지를 만들기 위해 사용한다...
             
           </div>
         
@@ -806,7 +712,7 @@ HTTP는 Stateless한 프로토콜이라 기본적으로 요청(Request)과 응�
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/07/30/2025-07-30-Natas-5/" 
+      href="/2025/07/31/2025-07-31-Natas-6/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -850,7 +756,7 @@ HTTP는 Stateless한 프로토콜이라 기본적으로 요청(Request)과 응�
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
    
 </div>
   
@@ -933,6 +839,105 @@ find 명령어 옵션 정리표
    
 
 
+<article id="post-2025-07-30-Natas-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/30/2025-07-30-Natas-5/">Natas 5</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-29T15:00:00.000Z" itemprop="datePublished">2025-07-30</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            1k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Natas 5 / write-up
+
+접속 정보
+
+URL : http://natas5.natas.labs.overthewire.org
+사용자 이름 : natas5
+비밀번호 : 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+
+
+접속하면,
+
+
+Access disallowed. You are not logged in
+
+접근이 허용되지 않았다고 한다. 로그인도 안되어 있다고 한다…
+근데 로그인이라는 말이 있는 것으로 보니, 쿠키 기반 로그인을 하고 있지 않을까 예상해볼 수 있다.
+
+Coookie
+로그인이라는 행위는 나를 증명하는 행위이다.
+그리고 서버는 증명이 맞는지 확인 즉, 인증해줘야한다.
+그럴려면 사용자를 기억해야하는데, 웹이라는 녀석은 stateless 라는 특성을 가지고 있다.
+
+그 특성이 무엇이냐…
+
+바로 상태를 기억하지 못한다는 것이다!
+HTTP는 Stateless한 프로토콜이라 기본적으로 요청(Request)과 응답(Response)만 하고 끝나버린다.
+서버는...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/30/2025-07-30-Natas-5/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-07-29-Bandit-4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -957,7 +962,7 @@ find 명령어 옵션 정리표
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
    
 </div>
   
@@ -1053,7 +1058,7 @@ ls, cd, cat, file, du, find 등이 있고,
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
    
 </div>
   
@@ -1122,105 +1127,6 @@ Access disallowed. You are visiting from “” while authorized users should co
    
 
 
-<article id="post-2025-07-28-Bandit-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/28/2025-07-28-Bandit-3/">Bandit 3</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-27T15:00:00.000Z" itemprop="datePublished">2025-07-28</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            643 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ls-options/" rel="tag">ls options</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Bandit 3 / write-up
-
-bandit 3 레벨 접속 패스워드 : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
-
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
-
-이번에는 파란 글씨다?
-리스트의 -l 옵션을 사용해서 자세히 보자.
-
-drwxr-xr-x 라고 되어 있는데, d는 디렉토리의 약자다.
-현재 작업하고 있는 디렉토리는
-
-/home/bandit3 이다.
-inhere에 플래그가 있을 것 같으니 작업(명령어를 수행)할 디렉토리를 변경해주겠다.
-cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있는 inhere로 작업 디렉토리를 변경한다.
-
-(변경된 모습)
-이제 여기서 다시 ls를 입력해 뭐가 들어있나 보자.
-
-? 쉽게 풀릴 줄 알았지만 ?
-없다. 아무것도.
-진짜 아무것도 없는지 ls 명령의 -a 옵션을 이용해 숨겨진건 없는지 확인해보자. (-l 로 상세히 확인 가능)
-
-하이 ㅎ
-뭔가 있다 ㅎ
-파일명이...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/28/2025-07-28-Bandit-3/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
 <article id="post-2025-07-28-Natas-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -1245,7 +1151,7 @@ cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있�
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">Overthewire</a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
    
 </div>
   
@@ -1308,6 +1214,105 @@ No more information leaks!! Not even Google will find it this time…
     <a class="right-panel  non-pic  "
       
       href="/2025/07/28/2025-07-28-Natas-3/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-07-28-Bandit-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/28/2025-07-28-Bandit-3/">Bandit 3</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-27T15:00:00.000Z" itemprop="datePublished">2025-07-28</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            643 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ls-options/" rel="tag">ls options</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Bandit 3 / write-up
+
+bandit 3 레벨 접속 패스워드 : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+이번 문제도 접속해서 플래그를 찾아보자.
+접속해서 뭐가 있나 확인해보니…
+
+이번에는 파란 글씨다?
+리스트의 -l 옵션을 사용해서 자세히 보자.
+
+drwxr-xr-x 라고 되어 있는데, d는 디렉토리의 약자다.
+현재 작업하고 있는 디렉토리는
+
+/home/bandit3 이다.
+inhere에 플래그가 있을 것 같으니 작업(명령어를 수행)할 디렉토리를 변경해주겠다.
+cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있는 inhere로 작업 디렉토리를 변경한다.
+
+(변경된 모습)
+이제 여기서 다시 ls를 입력해 뭐가 들어있나 보자.
+
+? 쉽게 풀릴 줄 알았지만 ?
+없다. 아무것도.
+진짜 아무것도 없는지 ls 명령의 -a 옵션을 이용해 숨겨진건 없는지 확인해보자. (-l 로 상세히 확인 가능)
+
+하이 ㅎ
+뭔가 있다 ㅎ
+파일명이...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/28/2025-07-28-Bandit-3/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>

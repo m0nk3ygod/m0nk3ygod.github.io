@@ -29,10 +29,10 @@
 <meta property="og:description" content="Linux Command 리눅스 명령어  CLI를 통한 다양한 리눅스 쉘 명령어 해킹 공부에 가장 기초적이며 필수적인 기술 매일 매일 사용하다보면 저절로 외워짐  명령어 종류  기본 명령어 파일 및 디렉토리 스크립팅과 자동화 시스템 및 네트워킹  옵션과 플래그  명령어 뒤에 하이픈(-)으로 시작하는 무언가.  옵션 : 인자를 추가로 받는 경우 플래그 : 인">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-08-03T15:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-14T04:03:42.567Z">
+<meta property="article:modified_time" content="2025-08-14T04:15:02.515Z">
 <meta property="article:author" content="Seungwon Lee">
-<meta property="article:tag" content="study">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="study">
 <meta property="article:tag" content="basic">
 <meta property="article:tag" content="command">
 <meta name="twitter:card" content="summary">
@@ -57,7 +57,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1755144232361;
+    window.__BUILD_ID__ = 1755145231914;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -196,32 +196,22 @@
       <h3 class="widget-title">Categories</h3>
       <div class="category-box">
             <a class="category-link" href="/categories/Overthewire/">
-                Overthewire
+                < Overthewire >
                 <div class="category-count">22</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
-                <div class="category-count">11</div>
-            </a>
-        
             <a class="category-link" href="/categories/Overthewire/Bandit/">
                 Bandit
                 <div class="category-count">11</div>
             </a>
-        </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
+        
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
+                <div class="category-count">11</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
-                Dreamhack
+                < Dreamhack >
                 <div class="category-count">5</div>
             </a>
         <div class="children"><div class="category-box">
@@ -230,14 +220,14 @@
                 <div class="category-count">3</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Wargame/System/">
-                System
+            <a class="category-link" href="/categories/Dreamhack/Wargame/Pwnable/">
+                - Pwnable
                 <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/Dreamhack/Wargame/Web/">
-                Web
-                <div class="category-count">1</div>
+                - Web
+                <div class="category-count">2</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/Study/">
@@ -245,18 +235,28 @@
                 <div class="category-count">2</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Study/Pwnable/">
-                Pwnable
+            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
+                - Basic
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
-                Basic
+            <a class="category-link" href="/categories/Dreamhack/Study/Tools/">
+                - Tools
                 <div class="category-count">1</div>
             </a>
         </div></div></div></div>
+            <a class="category-link" href="/categories/Tech/">
+                < Tech >
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
+            </a>
+        </div></div>
             <a class="category-link" href="/categories/picoCTF/">
-                picoCTF
+                < picoCTF >
                 <div class="category-count">8</div>
             </a>
         <div class="children"><div class="category-box">
@@ -266,10 +266,15 @@
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
-                settings
+                < settings >
                 <div class="category-count">1</div>
             </a>
-        </div>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/settings/Hexo/">
+                Hexo
+                <div class="category-count">1</div>
+            </a>
+        </div></div></div>
     </div>
   </div>
 
@@ -302,12 +307,6 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
-            <div class="recent-link-text">
-              Bandit 10
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/13/2025-08-13-GDB/" title="🔒 GDB (Dreamhack)" >
             <div class="recent-link-text">
               🔒 GDB (Dreamhack)
@@ -317,6 +316,12 @@
           <a class="recent-link" href="/2025/08/13/2025-08-13-Computer-Architecture/" title="🔒 Computer Architecture (Dreamhack)" >
             <div class="recent-link-text">
               🔒 Computer Architecture (Dreamhack)
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
+            <div class="recent-link-text">
+              Bandit 10
             </div>
           </a>
         
@@ -370,7 +375,7 @@
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Tech/">Tech</a>><a class="meta-cate-link" href="/categories/Tech/Linux/">Linux</a>
+  <a class="meta-cate-link" href="/categories/Tech/">< Tech ></a>><a class="meta-cate-link" href="/categories/Tech/Linux/">Linux</a>
    
 </div>
   
@@ -561,13 +566,13 @@
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2025/08/05/2025-08-05-Natas-7/"
-      title="Natas 7"
+      href="/2025/08/05/2025-08-05-Bandit-7/"
+      title="Bandit 7"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
       
-        Natas 7
+        Bandit 7
         
     </p>
   </a>

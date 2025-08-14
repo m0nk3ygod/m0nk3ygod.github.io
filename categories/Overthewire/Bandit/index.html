@@ -51,7 +51,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1755144232412;
+    window.__BUILD_ID__ = 1755145231924;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -190,32 +190,22 @@
       <h3 class="widget-title">Categories</h3>
       <div class="category-box">
             <a class="category-link" href="/categories/Overthewire/">
-                Overthewire
+                < Overthewire >
                 <div class="category-count">22</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Overthewire/Natas/">
-                Natas
-                <div class="category-count">11</div>
-            </a>
-        
             <a class="category-link" href="/categories/Overthewire/Bandit/">
                 Bandit
                 <div class="category-count">11</div>
             </a>
-        </div></div>
-            <a class="category-link" href="/categories/Tech/">
-                Tech
-                <div class="category-count">1</div>
-            </a>
-        <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Tech/Linux/">
-                Linux
-                <div class="category-count">1</div>
+        
+            <a class="category-link" href="/categories/Overthewire/Natas/">
+                Natas
+                <div class="category-count">11</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
-                Dreamhack
+                < Dreamhack >
                 <div class="category-count">5</div>
             </a>
         <div class="children"><div class="category-box">
@@ -224,14 +214,14 @@
                 <div class="category-count">3</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Wargame/System/">
-                System
+            <a class="category-link" href="/categories/Dreamhack/Wargame/Pwnable/">
+                - Pwnable
                 <div class="category-count">1</div>
             </a>
         
             <a class="category-link" href="/categories/Dreamhack/Wargame/Web/">
-                Web
-                <div class="category-count">1</div>
+                - Web
+                <div class="category-count">2</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/Study/">
@@ -239,18 +229,28 @@
                 <div class="category-count">2</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Study/Pwnable/">
-                Pwnable
+            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
+                - Basic
                 <div class="category-count">1</div>
             </a>
         
-            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
-                Basic
+            <a class="category-link" href="/categories/Dreamhack/Study/Tools/">
+                - Tools
                 <div class="category-count">1</div>
             </a>
         </div></div></div></div>
+            <a class="category-link" href="/categories/Tech/">
+                < Tech >
+                <div class="category-count">1</div>
+            </a>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/Tech/Linux/">
+                Linux
+                <div class="category-count">1</div>
+            </a>
+        </div></div>
             <a class="category-link" href="/categories/picoCTF/">
-                picoCTF
+                < picoCTF >
                 <div class="category-count">8</div>
             </a>
         <div class="children"><div class="category-box">
@@ -260,10 +260,15 @@
             </a>
         </div></div>
             <a class="category-link" href="/categories/settings/">
-                settings
+                < settings >
                 <div class="category-count">1</div>
             </a>
-        </div>
+        <div class="children"><div class="category-box">
+            <a class="category-link" href="/categories/settings/Hexo/">
+                Hexo
+                <div class="category-count">1</div>
+            </a>
+        </div></div></div>
     </div>
   </div>
 
@@ -296,12 +301,6 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
-            <div class="recent-link-text">
-              Bandit 10
-            </div>
-          </a>
-        
           <a class="recent-link" href="/2025/08/13/2025-08-13-GDB/" title="🔒 GDB (Dreamhack)" >
             <div class="recent-link-text">
               🔒 GDB (Dreamhack)
@@ -311,6 +310,12 @@
           <a class="recent-link" href="/2025/08/13/2025-08-13-Computer-Architecture/" title="🔒 Computer Architecture (Dreamhack)" >
             <div class="recent-link-text">
               🔒 Computer Architecture (Dreamhack)
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/13/2025-08-13-Bandit-10/" title="Bandit 10" >
+            <div class="recent-link-text">
+              Bandit 10
             </div>
           </a>
         
@@ -370,7 +375,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #encoding #decoding #base64
+            #overthewire #bandit #linux #study #encoding #decoding #base64
         </div>
       </a>
     
@@ -389,7 +394,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #piping #redirection #strings #grep
+            #overthewire #bandit #linux #study #piping #redirection #strings #grep
         </div>
       </a>
     
@@ -408,7 +413,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #uniq #sort #piping #redirection
+            #overthewire #bandit #linux #study #uniq #sort #piping #redirection
         </div>
       </a>
     
@@ -427,7 +432,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #man command #grep command
+            #overthewire #bandit #linux #study #man command #grep command
         </div>
       </a>
     
@@ -446,7 +451,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #find command
+            #overthewire #bandit #linux #study #find command
         </div>
       </a>
     
@@ -465,7 +470,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #find command
+            #overthewire #bandit #linux #study #find command
         </div>
       </a>
     
@@ -484,7 +489,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #file command
+            #overthewire #bandit #linux #study #file command
         </div>
       </a>
     
@@ -503,7 +508,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #ls options
+            #overthewire #bandit #linux #study #ls options
         </div>
       </a>
     
@@ -522,7 +527,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #how to cat space
+            #overthewire #bandit #linux #study #how to cat space
         </div>
       </a>
     
@@ -541,7 +546,7 @@
             </div>
         </div>
         <div class="tags">
-            #overthewire #study #bandit #linux #how to cat -
+            #overthewire #bandit #linux #study #how to cat -
         </div>
       </a>
     
