@@ -48,10 +48,10 @@
 <link rel="stylesheet" href="/css/style.css">
 
   
-  <script>
+  <!-- <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1755502966554;
+    window.__BUILD_ID__ = 1755565383740;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -77,7 +77,7 @@
       });
     }
   })();
-  </script>
+  </script> -->
 
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -206,7 +206,7 @@
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/">
                 < Dreamhack >
-                <div class="category-count">6</div>
+                <div class="category-count">7</div>
             </a>
         <div class="children"><div class="category-box">
             <a class="category-link" href="/categories/Dreamhack/Wargame/">
@@ -226,16 +226,16 @@
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/Study/">
                 Study
-                <div class="category-count">2</div>
+                <div class="category-count">3</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
-                - Basic
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/Dreamhack/Study/Tools/">
                 - Tools
+                <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
+                - Basic
                 <div class="category-count">1</div>
             </a>
         </div></div></div></div>
@@ -282,7 +282,7 @@
       
         <a class="archive-link" href="/archives/2025/08 ">
           August 2025 
-          <div class="archive-count">23 </div>
+          <div class="archive-count">24 </div>
         </a>
       
         <a class="archive-link" href="/archives/2025/07 ">
@@ -313,21 +313,21 @@
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/08/13/2025-08-13-Computer-Architecture/" title="🔒 Computer Architecture (Dreamhack)" >
+          <a class="recent-link" href="/2025/08/13/2025-08-18-Pwntools/" title="🔒 Pwntools (Dreamhack)" >
             <div class="recent-link-text">
-              🔒 Computer Architecture (Dreamhack)
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/08/13/2025-08-13-Natas-10/" title="Natas 10" >
-            <div class="recent-link-text">
-              Natas 10
+              🔒 Pwntools (Dreamhack)
             </div>
           </a>
         
           <a class="recent-link" href="/2025/08/13/2025-08-13-GDB/" title="🔒 GDB (Dreamhack)" >
             <div class="recent-link-text">
               🔒 GDB (Dreamhack)
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/08/13/2025-08-13-Natas-10/" title="Natas 10" >
+            <div class="recent-link-text">
+              Natas 10
             </div>
           </a>
         
@@ -341,301 +341,6 @@
     </div>
     <div id="content-body">
       
-   
-
-
-<article id="post-2025-08-11-picoCTF-logon" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-logon/">(Easy) logon</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">< picoCTF ></a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            764 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/logon/" rel="tag">logon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : logon
-
-
-
-[Description]
-공장은 모든 사용자에게 무언가를 숨기고 있어요.
-Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아낼 수 있을까요?
-
-음… Description 만 봤을 때는 무슨 말인지 모르겠다…
-일단 한 번 접속해보자.
-
-유저명과 비밀번호를 입력할 수 있는 폼이 존재하고, Sign in 버튼을 통해 제출할 수 있는 것으로 보인다.
-우측 상단에는 Home과 Sign Out 링크도 보인다.
-
-일단 &quot;Joe&quot;에 이름으로 로그인하라고 했으니 로그인 해보았다.
-비밀번호는 모르겠어서 그냥 joe라고 입력했는데…
-
-(Username : joe | Password : joe)
-
-성공: 로그인했어요! 하지만 플래그를 볼 수 있을지는 잘 모르겠네요.
-
-로그인에 성공했다…!
-근데 플래그는 볼 수 없다고 한다… (아마도 권한이 없는 듯 ...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-logon/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-Cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookies/">(Easy) Cookies</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">< picoCTF ></a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.9k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : Cookies
-
-
-
-[Description]
-누가 쿠키를 안 좋아하겠어요?
-가장 맛있는(?) 쿠키를 찾아보세요
-
-보아하니 먹는 쿠키는 아닌거 같고,
-웹 브라우저의 HTTP 쿠키를 의미하는 것 같다.
-우선 문제에 접속해봤다.
-
-뭔가 입력 받을 수 있는 입력폼과,
-폼 전송 역할을 할 것 같은 Search 버튼도 보인다.
-입력폼에 “snickerdoodle” 이라는 단어가 보여서
-똑같이 입력해봤더니
-
-
-그건 쿠키에요! 하지만 별로 특별하진 않네요…
-
-해당 문구와 함께 “I love snickerdoodle cookies!” 라는 문장을 보여준다.
-아무래도 특별한 쿠키를 찾으면 되는 것 같다.
-
-쿠키 문제인 것 같으니 개발자 도구를 열어 쿠키가 설정되어있는지, 어떻게 설정되어 있는지 확인해 봤다.  
-(개발자 도구 단축키는 F12 or 페이지 빈 곳 우클릭 - 검사)
-개발자 도구...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-Cookies/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-11-picoCTF-where-are-the-robots" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/">(Easy) where are the robots</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/picoCTF/">< picoCTF ></a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            825 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/where-are-the-robots/" rel="tag">where are the robots</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              picoCTF / Web Exploitation
-
-Difficulty Level : Easy
-Title : where are the robots
-
-
-
-[Description]
-당신은 로봇들을 찾을 수 있나요?
-
-Description을 보면 로봇이라는 말이 나온다.
-로봇을 언급하는거보니 robots.txt 를 이용해야함을 어느정도 유추해 볼 수 있다.
-robots.txt
-robots.txt 파일이란, 웹사이트의 루트 디렉토리에 위치하는 텍스트 파일로,
-검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고,
-어떤 페이지는 수집하지 말아야 하는지 지시하는 역할을 한다.
-자세한 내용은 공식 문서 참고
-(https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko)
-
-우선 문제에 접속해봤다.
-
-ㄷㄷㄷ 무섭다…
-로봇이 어디있냐고 물어보고 있다.
-주...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
    
 
 
@@ -834,7 +539,7 @@ Title : n0s4n1ty 1
    
 
 
-<article id="post-2025-08-08-Dreamhack-Wargame-Beginner-session" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-08-11-picoCTF-Cookies" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -845,7 +550,7 @@ Title : n0s4n1ty 1
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-session/">🔒 (B) session</a>
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Cookies/">(Easy) Cookies</a>
       </h1>
     
   
@@ -853,27 +558,59 @@ Title : n0s4n1ty 1
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-07T15:00:00.000Z" itemprop="datePublished">2025-08-08</time>
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Dreamhack/">< Dreamhack ></a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/">Wargame</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/Web/">- Web</a>
+  <a class="meta-cate-link" href="/categories/picoCTF/">< picoCTF ></a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            3.7k words 
+            1.9k words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/brute-force/" rel="tag">brute force</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dreamhack/" rel="tag">dreamhack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/session/" rel="tag">session</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wargame/" rel="tag">wargame</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          해당글은 비밀글 입니다.
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : Cookies
+
+
+
+[Description]
+누가 쿠키를 안 좋아하겠어요?
+가장 맛있는(?) 쿠키를 찾아보세요
+
+보아하니 먹는 쿠키는 아닌거 같고,
+웹 브라우저의 HTTP 쿠키를 의미하는 것 같다.
+우선 문제에 접속해봤다.
+
+뭔가 입력 받을 수 있는 입력폼과,
+폼 전송 역할을 할 것 같은 Search 버튼도 보인다.
+입력폼에 “snickerdoodle” 이라는 단어가 보여서
+똑같이 입력해봤더니
+
+
+그건 쿠키에요! 하지만 별로 특별하진 않네요…
+
+해당 문구와 함께 “I love snickerdoodle cookies!” 라는 문장을 보여준다.
+아무래도 특별한 쿠키를 찾으면 되는 것 같다.
+
+쿠키 문제인 것 같으니 개발자 도구를 열어 쿠키가 설정되어있는지, 어떻게 설정되어 있는지 확인해 봤다.  
+(개발자 도구 단축키는 F12 or 페이지 빈 곳 우클릭 - 검사)
+개발자 도구...
+            
+          </div>
         
       </div>
 
@@ -883,7 +620,299 @@ Title : n0s4n1ty 1
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-session/" 
+      href="/2025/08/11/2025-08-11-picoCTF-Cookies/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-Scavenger-Hunt" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/">(Easy) Scavenger Hunt</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">< picoCTF ></a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.2k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scavenger-hunt/" rel="tag">scavenger hunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : Scavenger Hunt
+
+
+
+[Description]
+이 사이트 http://mercury.picoctf.net:39491/ 주변에 흥미로운 정보가 숨겨져 있어요. 찾을 수 있겠나요?
+
+Description 만 읽어봤을 때는 사이트 내부에 플래그가 숨겨져 있나보다. (당연히…)
+바로 사이트에 접속해봤다.
+
+사이트에 접속하면 이런 모습을 볼 수 있는데,
+How라는 글자를 클릭하면 위 사진처럼 나오고,
+What이라는 글자를 클릭하면
+
+이런게 출력된다.
+
+이것말고는 딱히 다른 기능은 없어보이니 바로 개발자도구를 켜서 정보들을 얻어보자.
+(개발자 도구 - F12 or 페이지 빈 곳 우클릭 - 검사)
+
+Elements 탭에서 HTML 구조를 확인하고 있었는데…
+
+주석에 “first part of the flag” 라고 하며 플래그 포맷 시작 부분이 있는 것을 발견했다.
+아무래도...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-Scavenger-Hunt/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-where-are-the-robots" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/">(Easy) where are the robots</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">< picoCTF ></a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            825 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/where-are-the-robots/" rel="tag">where are the robots</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : where are the robots
+
+
+
+[Description]
+당신은 로봇들을 찾을 수 있나요?
+
+Description을 보면 로봇이라는 말이 나온다.
+로봇을 언급하는거보니 robots.txt 를 이용해야함을 어느정도 유추해 볼 수 있다.
+robots.txt
+robots.txt 파일이란, 웹사이트의 루트 디렉토리에 위치하는 텍스트 파일로,
+검색 엔진의 **웹 크롤러(로봇)**에게 해당 사이트의 어떤 페이지를 크롤링(수집)할 수 있고,
+어떤 페이지는 수집하지 말아야 하는지 지시하는 역할을 한다.
+자세한 내용은 공식 문서 참고
+(https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt?hl=ko)
+
+우선 문제에 접속해봤다.
+
+ㄷㄷㄷ 무섭다…
+로봇이 어디있냐고 물어보고 있다.
+주...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-where-are-the-robots/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-11-picoCTF-logon" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/11/2025-08-11-picoCTF-logon/">(Easy) logon</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-10T15:00:00.000Z" itemprop="datePublished">2025-08-11</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/picoCTF/">< picoCTF ></a>><a class="meta-cate-link" href="/categories/picoCTF/Web-Exploitation/">Web Exploitation</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            764 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/logon/" rel="tag">logon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/picoctf/" rel="tag">picoctf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-hacking/" rel="tag">web hacking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/write-up/" rel="tag">write-up</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              picoCTF / Web Exploitation
+
+Difficulty Level : Easy
+Title : logon
+
+
+
+[Description]
+공장은 모든 사용자에게 무언가를 숨기고 있어요.
+Joe라는 이름으로 로그인해서, 그들이 뭘 보고 있었는지 알아낼 수 있을까요?
+
+음… Description 만 봤을 때는 무슨 말인지 모르겠다…
+일단 한 번 접속해보자.
+
+유저명과 비밀번호를 입력할 수 있는 폼이 존재하고, Sign in 버튼을 통해 제출할 수 있는 것으로 보인다.
+우측 상단에는 Home과 Sign Out 링크도 보인다.
+
+일단 &quot;Joe&quot;에 이름으로 로그인하라고 했으니 로그인 해보았다.
+비밀번호는 모르겠어서 그냥 joe라고 입력했는데…
+
+(Username : joe | Password : joe)
+
+성공: 로그인했어요! 하지만 플래그를 볼 수 있을지는 잘 모르겠네요.
+
+로그인에 성공했다…!
+근데 플래그는 볼 수 없다고 한다… (아마도 권한이 없는 듯 ...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/11/2025-08-11-picoCTF-logon/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -953,6 +982,75 @@ Title : n0s4n1ty 1
     <a class="right-panel  non-pic  "
       
       href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-pathtraversal/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
+<article id="post-2025-08-08-Dreamhack-Wargame-Beginner-session" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-session/">🔒 (B) session</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-08-07T15:00:00.000Z" itemprop="datePublished">2025-08-08</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Dreamhack/">< Dreamhack ></a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/">Wargame</a>><a class="meta-cate-link" href="/categories/Dreamhack/Wargame/Web/">- Web</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            3.7k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/brute-force/" rel="tag">brute force</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dreamhack/" rel="tag">dreamhack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/session/" rel="tag">session</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wargame/" rel="tag">wargame</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          해당글은 비밀글 입니다.
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/08/08/2025-08-08-Dreamhack-Wargame-Beginner-session/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -1153,105 +1251,6 @@ View sourececode 를 클릭해 소스코드가 어떻게 되어있는지 확인�
     <a class="right-panel  non-pic  "
       
       href="/2025/08/06/2025-08-06-Natas-8/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-08-05-Bandit-7" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/08/05/2025-08-05-Bandit-7/">Bandit 7</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-08-04T15:00:00.000Z" itemprop="datePublished">2025-08-05</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            1.2k words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep-command/" rel="tag">grep command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/man-command/" rel="tag">man command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Bandit 7 / write-up
-
-bandit 7 레벨 접속 패스워드 : morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
-
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
-
-?? 꽁짜 문제인가 ??
-한번 읽어봤는데
-
-어… 뭔가 엄청 많이 들어있다…(사진에서는 짤린거임.)
-이것들 중에 플래그가 있다는 말인 것 같다…
-문제를 한번 읽어 보자.
-
-문제를 보면 data.txt 안에 다음 레벨로 가는 패스워드가 들어있고, millionth 라는 단어 바로 옆에 있다고 한다.
-
-이번에는 정석적으로(?) 풀어보겠다.
-
-내가 써본(지금까지 알게된) 명령어
-
-ls, cd, cat, pwd, find, file
-
-일단 이 중에서 파일 내에 특정 단어 옆에 있는 텍스트를 추출할 수 있을만한 명령어는 보이지 않는다…
-
-man(manual) 명령을 사용해서 쓸만한 명령이 있나 찾아보자.
-(man은 리눅스 명령어 도움말을 볼 수 있는 명령이다)
-다음과 같이 명령을...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/08/05/2025-08-05-Bandit-7/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
