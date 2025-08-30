@@ -51,7 +51,7 @@
   <script>
   (function () {
     // 1) 템플릿에서 주입되는 빌드 ID (Hexo 빌드 시각)
-    window.__BUILD_ID__ = 1756113447641;
+    window.__BUILD_ID__ = 1756535787053;
     const KEY = 'last_build_id';
     const last = Number(localStorage.getItem(KEY) || 0);
     const now  = Number(window.__BUILD_ID__ || Date.now());
@@ -229,14 +229,14 @@
                 <div class="category-count">3</div>
             </a>
         <div class="children"><div class="category-box">
-            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
-                - Basic
-                <div class="category-count">1</div>
-            </a>
-        
             <a class="category-link" href="/categories/Dreamhack/Study/Tools/">
                 - Tools
                 <div class="category-count">2</div>
+            </a>
+        
+            <a class="category-link" href="/categories/Dreamhack/Study/Basic/">
+                - Basic
+                <div class="category-count">1</div>
             </a>
         </div></div>
             <a class="category-link" href="/categories/Dreamhack/Windows/">
@@ -364,7 +364,7 @@
    
 
 
-<article id="post-2025-07-30-Bandit-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-07-30-Natas-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -375,7 +375,7 @@
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/30/2025-07-30-Bandit-5/">Bandit 5</a>
+        <a class="p-name article-title" href="/2025/07/30/2025-07-30-Natas-5/">Natas 5</a>
       </h1>
     
   
@@ -388,58 +388,50 @@
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.4k words 
+            858 words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/find-command/" rel="tag">find command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cookies/" rel="tag">cookies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Bandit 5 / write-up
+              Natas 5 / write-up
 
-bandit 5 레벨 접속 패스워드 : 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+접속 정보
 
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
-
-어…
-아무래도 힌트에 나와있던 find 명령어를 이용해서 파일을 찾는 방법을 써야할 것 같다…
-
-find를 쓰려면 찾기 조건이 필요하니 문제를 한번 읽고 와보자.
+URL : http://natas5.natas.labs.overthewire.org
+사용자 이름 : natas5
+비밀번호 : 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
 
 
-사람만 읽을 수 있고
-크기가 1033 바이트이며
-실행할 수 없음
+접속하면,
 
-실행할 수 없다는건 그냥 텍스트 파일이라는 의미 같고,
-사람만 읽을 수 있다는건 플래그가 들어있어서 그런 것 같다.
-일단 사이즈를 조건으로 사용하면 될 것 같다.
 
-사이즈를 조건으로 검색하려면 옵션을 줘야하는데, 여기서 find 명령에 대해 조금 더 자세히 살펴보고 넘어가보자.
+Access disallowed. You are not logged in
 
-find 명령어 옵션 정리표
+접근이 허용되지 않았다고 한다. 로그인도 안되어 있다고 한다…
+근데 로그인이라는 말이 있는 것으로 보니, 쿠키 기반 로그인을 하고 있지 않을까 예상해볼 수 있다.
 
-  
-    
-      분류
-      옵션
-      설명
-      예시
-    
-  
-  
-    기본 검색.현재 디렉토리에서...
+Coookie
+로그인이라는 행위는 나를 증명하는 행위이다.
+그리고 서버는 증명이 맞는지 확인 즉, 인증해줘야한다.
+그럴려면 사용자를 기억해야하는데, 웹이라는 녀석은 stateless 라는 특성을 가지고 있다.
+
+그 특성이 무엇이냐…
+
+바로 상태를 기억하지 못한다는 것이다!
+HTTP는 Stateless한 프로토콜이라 기본적으로 요청(Request)과 응답(Response)만 하고 끝나버린다.
+서버는...
             
           </div>
         
@@ -451,7 +443,7 @@ find 명령어 옵션 정리표
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/07/30/2025-07-30-Bandit-5/" 
+      href="/2025/07/30/2025-07-30-Natas-5/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -660,6 +652,105 @@ Access disallowed. You are visiting from “” while authorized users should co
    
 
 
+<article id="post-2025-07-28-Bandit-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/28/2025-07-28-Bandit-3/">Bandit 3</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-27T15:00:00.000Z" itemprop="datePublished">2025-07-28</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            525 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ls-options/" rel="tag">ls options</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Bandit 3 / write-up
+
+bandit 3 레벨 접속 패스워드 : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+이번 문제도 접속해서 플래그를 찾아보자.
+접속해서 뭐가 있나 확인해보니…
+
+이번에는 파란 글씨다?
+리스트의 -l 옵션을 사용해서 자세히 보자.
+
+drwxr-xr-x 라고 되어 있는데, d는 디렉토리의 약자다.
+현재 작업하고 있는 디렉토리는
+
+/home/bandit3 이다.
+inhere에 플래그가 있을 것 같으니 작업(명령어를 수행)할 디렉토리를 변경해주겠다.
+cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있는 inhere로 작업 디렉토리를 변경한다.
+
+(변경된 모습)
+이제 여기서 다시 ls를 입력해 뭐가 들어있나 보자.
+
+? 쉽게 풀릴 줄 알았지만 ?
+없다. 아무것도.
+진짜 아무것도 없는지 ls 명령의 -a 옵션을 이용해 숨겨진건 없는지 확인해보자. (-l 로 상세히 확인 가능)
+
+하이 ㅎ
+뭔가 있다 ㅎ
+파일명이...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/28/2025-07-28-Bandit-3/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-07-28-Natas-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -747,105 +838,6 @@ No more information leaks!! Not even Google will find it this time…
     <a class="right-panel  non-pic  "
       
       href="/2025/07/28/2025-07-28-Natas-3/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-07-28-Bandit-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/28/2025-07-28-Bandit-3/">Bandit 3</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-27T15:00:00.000Z" itemprop="datePublished">2025-07-28</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            525 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ls-options/" rel="tag">ls options</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Bandit 3 / write-up
-
-bandit 3 레벨 접속 패스워드 : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
-
-이번 문제도 접속해서 플래그를 찾아보자.
-접속해서 뭐가 있나 확인해보니…
-
-이번에는 파란 글씨다?
-리스트의 -l 옵션을 사용해서 자세히 보자.
-
-drwxr-xr-x 라고 되어 있는데, d는 디렉토리의 약자다.
-현재 작업하고 있는 디렉토리는
-
-/home/bandit3 이다.
-inhere에 플래그가 있을 것 같으니 작업(명령어를 수행)할 디렉토리를 변경해주겠다.
-cd (change directory) 명령으로 현재 작업중인 디렉토리 안에 있는 inhere로 작업 디렉토리를 변경한다.
-
-(변경된 모습)
-이제 여기서 다시 ls를 입력해 뭐가 들어있나 보자.
-
-? 쉽게 풀릴 줄 알았지만 ?
-없다. 아무것도.
-진짜 아무것도 없는지 ls 명령의 -a 옵션을 이용해 숨겨진건 없는지 확인해보자. (-l 로 상세히 확인 가능)
-
-하이 ㅎ
-뭔가 있다 ㅎ
-파일명이...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/28/2025-07-28-Bandit-3/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
@@ -1060,6 +1052,105 @@ flag : MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
    
 
 
+<article id="post-2025-07-26-Bandit-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 itemprop="name">
+        <a class="p-name article-title" href="/2025/07/26/2025-07-26-Bandit-1/">Bandit 1</a>
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-07-25T15:00:00.000Z" itemprop="datePublished">2025-07-26</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            599 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/how-to-cat/" rel="tag">how to cat -</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <div class="truncate-text">
+            
+              Bandit 1 / write-up
+bandit 1 레벨 접속 패스워드 : ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+이번 문제도 접속하고 플래그를 찾으러 가보겠다.
+일단 뭐가 있나 확인해보니…
+
+“-” 이 친구가 파일 이름인 거 같다.
+그냥 읽으려고 하면,
+
+입력을 무한정 기다린다.
+왜 이런가?
+
+(빌드업)
+리눅스 명령어는 옵션 또는 인자를 필요로 하는 명령어들이 존재한다.
+명령어와 옵션을 함께 사용하면 더욱 다양하고 풍부한 작업을 수행할 수 있게 된다.
+그 옵션은 어떻게 사용하는가?
+바로 위에서 접속하자마자 파일들을 확인할 때 사용한 명령어를 혹시 보았는가?
+
+ls 옆에 -al 이라는 게 붙었다.
+이게 바로 옵션이다.
+
+a는 숨김 파일(또는 디렉토리)까지 전부 보여달라는 의미이고,
+l은 상세 리스트로 보여달라는 의미이다.
+
+a와 l을 위 2가지 의미로 ls 명령에 전달하기 위해서는 “-” 요녀석을 사용해서 옵션임을 명시해야한다.
+
+그렇다면…? 왜 무한정 기...
+            
+          </div>
+        
+      </div>
+
+         
+    </div>
+    
+     
+    <a class="right-panel  non-pic  "
+      
+      href="/2025/07/26/2025-07-26-Bandit-1/" 
+    >
+       
+      <i class="fa-solid fa-angle-right non-pic"></i>
+       
+    </a>
+     
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+   
+
+
 <article id="post-2025-07-26-Natas-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
@@ -1164,7 +1255,7 @@ flag : TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
    
 
 
-<article id="post-2025-07-26-Bandit-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-2025-07-25-Natas-0" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
    
   <div class="article-inner">
     <div class="article-main">
@@ -1175,106 +1266,7 @@ flag : TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
   
     
       <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/26/2025-07-26-Bandit-1/">Bandit 1</a>
-      </h1>
-    
-  
-</div>
-
-        <div class='meta-info-bar'>
-          <div class="meta-info">
-  <time class="dt-published" datetime="2025-07-25T15:00:00.000Z" itemprop="datePublished">2025-07-26</time>
-</div>
-          <div class="need-seperator meta-info">
-            <div class="meta-cate-flex">
-  
-  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
-   
-</div>
-  
-          </div>
-          <div class="wordcount need-seperator meta-info">
-            599 words 
-          </div>
-        </div>
-        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/how-to-cat/" rel="tag">how to cat -</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
-
-      </header>
-      <div class="e-content article-entry" itemprop="articleBody">
-        
-          <div class="truncate-text">
-            
-              Bandit 1 / write-up
-bandit 1 레벨 접속 패스워드 : ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
-
-이번 문제도 접속하고 플래그를 찾으러 가보겠다.
-일단 뭐가 있나 확인해보니…
-
-“-” 이 친구가 파일 이름인 거 같다.
-그냥 읽으려고 하면,
-
-입력을 무한정 기다린다.
-왜 이런가?
-
-(빌드업)
-리눅스 명령어는 옵션 또는 인자를 필요로 하는 명령어들이 존재한다.
-명령어와 옵션을 함께 사용하면 더욱 다양하고 풍부한 작업을 수행할 수 있게 된다.
-그 옵션은 어떻게 사용하는가?
-바로 위에서 접속하자마자 파일들을 확인할 때 사용한 명령어를 혹시 보았는가?
-
-ls 옆에 -al 이라는 게 붙었다.
-이게 바로 옵션이다.
-
-a는 숨김 파일(또는 디렉토리)까지 전부 보여달라는 의미이고,
-l은 상세 리스트로 보여달라는 의미이다.
-
-a와 l을 위 2가지 의미로 ls 명령에 전달하기 위해서는 “-” 요녀석을 사용해서 옵션임을 명시해야한다.
-
-그렇다면…? 왜 무한정 기...
-            
-          </div>
-        
-      </div>
-
-         
-    </div>
-    
-     
-    <a class="right-panel  non-pic  "
-      
-      href="/2025/07/26/2025-07-26-Bandit-1/" 
-    >
-       
-      <i class="fa-solid fa-angle-right non-pic"></i>
-       
-    </a>
-     
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-   
-
-
-<article id="post-2025-07-25-Bandit-0" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-   
-  <div class="article-inner">
-    <div class="article-main">
-      <header class="article-header">
-        
-<div class="main-title-bar">
-  <div class="main-title-dot"></div>
-  
-    
-      <h1 itemprop="name">
-        <a class="p-name article-title" href="/2025/07/25/2025-07-25-Bandit-0/">Bandit 0</a>
+        <a class="p-name article-title" href="/2025/07/25/2025-07-25-Natas-0/">Natas 0</a>
       </h1>
     
   
@@ -1287,47 +1279,50 @@ a와 l을 위 2가지 의미로 ls 명령에 전달하기 위해서는 “-” �
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
   
-  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Bandit/">Bandit</a>
+  <a class="meta-cate-link" href="/categories/Overthewire/">< Overthewire ></a>><a class="meta-cate-link" href="/categories/Overthewire/Natas/">Natas</a>
    
 </div>
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            610 words 
+            482 words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bandit/" rel="tag">bandit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh-command/" rel="tag">ssh command</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/natas/" rel="tag">natas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/overthewire/" rel="tag">overthewire</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/study/" rel="tag">study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web-basic/" rel="tag">web basic</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <div class="truncate-text">
             
-              Bandit 0 / write-up
+              Natas 0 / write-up
+접속 정보
 
-ssh 접속 방법을 알고 있는지 부터가 이 문제의 시작이었다.
-ssh 서버에 접속하는 방법은 다음과 같다.
-ssh 유저명@호스트주소 -p 포트
-
-bandi0의 접속 정보는 Overthewire에서 확인할 수 있는데, 정보는 다음과 같다.
-
-유저명 : bandit0
-호스트주소 : bandit.labs.overthewire.org
-포트 : 2220
-패스워드 : bandit0
+URL : http://natas0.natas.labs.overthewire.org
+사용자 이름 : natas0
+비밀번호 : natas0
 
 
-이를 토대로 문제 접속하면? (패스워드는 입력해도 안보이는게 정상! 그냥 그대로 입력하고 엔터)
-1ssh bandit0@bandit.labs.overthewire.org -p 2220
+문제를 풀기 위해 접속 정보를 해당 문제에 맞게 입력해준다.
 
-접속 성공.
+접속하면 다음과 같은 문구가 나온다.
 
-접속했으니 해당 서버에 여러가지 정보들을 수집하여 flag를 찾아내면 된다. 예를 들면 다음과 같은 명령어로 정보를 수집할 수 있다.
+You can find the password for the next level on this page.
 
-whoami : 내가 현재 어떤 사용자로 접속중인지
-ls : 현재 위치(또는 작업 중인) 디렉토리에 어떤게 있는지 리스트형식으로 보여줌
-p...
+다음 레벨에 필요한 패스워드를 이 페이지에서 얻을 수 있다고 한다.
+그렇다면 페이지 어딘가에 있다는 소리인데,
+지금 아무리 뚫어져라 쳐다봐도 다른 정보들은 얻을 수 없었다.
+그렇다면 이제 웹 페이지를 뜯어볼 차례이다.
+웹 페이지 아무대나 우클릭하면, “검사” 라는 항목이 있을텐데
+
+클릭해보면?
+
+이런식으로 개발자 도구가 켜지면서 페이지의 요소들이 어떻게 구성이 되어있는지 볼 수 있다.
+여기서 Sources 탭을 확인해보자.
+
+그러면 서버로부터 전달 받은 페이지 소스코드를 볼 수 있는데,
+...
             
           </div>
         
@@ -1339,7 +1334,7 @@ p...
      
     <a class="right-panel  non-pic  "
       
-      href="/2025/07/25/2025-07-25-Bandit-0/" 
+      href="/2025/07/25/2025-07-25-Natas-0/" 
     >
        
       <i class="fa-solid fa-angle-right non-pic"></i>
